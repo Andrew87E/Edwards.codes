@@ -11,7 +11,11 @@ const blogSchema = new Schema({
         votes: Number,
         favs: Number,
     },
-});
+},
+{
+    collection: "Blog"
+}
+);
 
 const Blog = models.Blog || model("Blog", blogSchema);
 

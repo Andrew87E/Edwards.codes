@@ -6,19 +6,22 @@ import Blog from "../../../models/blogPosts";
  * @param {import('next').NextApiResponse} res
  */
 
-export default async function addTest(req: any, res: any) {
+export default async function addBlog(req: any, res: any) {
     try {
         console.log("CONNECTING TO MONGO");
         await connectMongo();
         console.log("CONNECTED TO MONGO");
 
         console.log("CREATING DOCUMENT");
-        const test = await Blog.create(req.body);
+        const blog = await Blog.create(req.body);
         console.log("CREATED DOCUMENT");
 
-        res.json({ test });
+        res.json({ blog });
     } catch (error) {
         console.log(error);
         res.json({ error });
     }
 }
+
+
+
