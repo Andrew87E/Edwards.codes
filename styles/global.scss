@@ -1,7 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "variables";
 
 :root {
-  background-color: black;
+    background-color: black;
+}
+
+.ae-intro-text {
+    text-shadow: $light-green 4px 4px;
+    letter-spacing: 5px;
+    text-shadow: 4px 4px 0 $dark-teal, 6px 6px 0 $light-green;
+}
+
+.ae-links {
+    text-shadow: 4px 4px 0 $dark-teal, 
+    6px 6px 0 $light-green;
 }

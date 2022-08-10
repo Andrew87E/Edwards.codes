@@ -1,7 +1,8 @@
 import { Footer, Jumbotron, ProjectCards, Navbar } from "../Components";
 import React from "react";
+import { GetStaticProps } from "next";
 
-const Projects: React.FC = () => {
+const Projects: GetStaticProps = () => {
     return (
         <>
             <Navbar />
