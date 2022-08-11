@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 @import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Poppins&family=Rancho&family=Roboto+Mono&family=Space+Grotesk:wght@500&display=swap");
+
+// font-family: 'Lustria', serif;
+// font-family: 'Poppins', sans-serif;
+// font-family: 'Rancho', cursive;
+// font-family: 'Roboto Mono', monospace;
+// font-family: 'Space Grotesk', sans-serif;
 
 :root {
     background-color: black;
@@ -14,6 +21,19 @@
 }
 
 .ae-links {
-    text-shadow: 4px 4px 0 $dark-teal, 
-    6px 6px 0 $light-green;
+    text-shadow: 4px 4px 0 $dark-teal;
+}
+
+.ae-letters {
+    text-shadow: 4px 4px 0 $dark-teal;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.ae-title-letters {
+    text-shadow: 2px 2px 0 $dark-green;
+    font-family: "Lustria", sans-serif;
+}
+
+#ae-particles {
+    z-index: -100;
 }

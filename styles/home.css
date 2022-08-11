@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Poppins&family=Rancho&family=Roboto+Mono&family=Space+Grotesk:wght@500&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,4 +14,12 @@
 
 .ae-links {
   text-shadow: 4px 4px 0 #025959, 6px 6px 0 #04d939;
+}
+
+.ae-letters {
+  text-shadow: 4px 4px 0 #025959, 6px 6px 0 #04d939;
+}
+
+#ae-particles {
+  z-index: -100;
 }/*# sourceMappingURL=home.css.map */

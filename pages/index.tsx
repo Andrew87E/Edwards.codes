@@ -1,15 +1,17 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { Footer, Navbar, Jumbotron, Hero, Intro, FavProjects } from "../Components";
+import { Footer, Navbar, Jumbotron, Hero, Intro, FavProjects, ParticlesContainer } from "../Components";
+
 
 
 const Home: GetStaticProps = () => {
+
   return (
     <>
+      <ParticlesContainer />
       <Navbar />
       <Jumbotron />
       <Intro />
-      <FavProjects />
       <Hero />
       <Footer />
     </>

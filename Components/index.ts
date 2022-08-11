@@ -6,6 +6,6 @@ export {ProjectCards} from "./Project-Cards/ProjectCards"
 export {FavProjects} from './favProjects/favProjects'
 export {Intro} from './Intro/intro'
 export {BlogCards} from './blog-cards/blogCards'
-
-
+export {ParticlesContainer} from './particles/particles'
+export {AnimatedLetters} from './letters/letters'
 

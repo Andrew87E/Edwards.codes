@@ -33,26 +33,26 @@ export const Navbar: React.FC = () => {
       <ul className="inline-flex mr-4 flex-wrap">
         <li>
           <Link href="/">
-            <a className="text-white inline-flex mr-5 hover:border-gray-300 hover:text-lime-500">
+            <a className="text-white inline-flex mr-5 hover:border-gray-300 hover:text-lime-500 transition-all duration-700 hover:duration-100 hover:scale-125">
               Home
             </a>
           </Link>
         </li>
         <li>
           <Link href="/projects">
-            <a className="text-white inline-flex mr-5 hover:border-gray-300 hover:text-lime-500">
+            <a className="text-white inline-flex mr-5 hover:border-gray-300 hover:text-lime-500 transition-all duration-700 hover:duration-100 hover:scale-125">
               Projects
             </a>
           </Link>
           <Link href="/blog">
-            <a className="text-white inline-flex mr-5 hover:border-gray-300 hover:text-lime-500">
+            <a className="text-white inline-flex mr-5 hover:border-gray-300 hover:text-lime-500 transition-all duration-700 hover:duration-100 hover:scale-125">
               Blog
             </a>
           </Link>
         </li>
         <li>
           <Link href="/about">
-            <a className="text-white inline-flex mr-5 hover:border-gray-300 hover:text-lime-500">
+            <a className="text-white inline-flex mr-5 hover:border-gray-300 hover:text-lime-500 transition-all duration-700 hover:duration-100 hover:scale-125">
               About Me
             </a>
           </Link>
