@@ -11,6 +11,8 @@
   "dependencies": {
     "@headlessui/react": "^1.6.6",
     "@reduxjs/toolkit": "^1.8.3",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.4",
     "autoprefixer": "^10.4.8",
     "colors": "^1.4.0",
     "mongoose": "^6.5.2",
@@ -35,6 +37,7 @@
     "@types/node": "18.6.4",
     "@types/react": "18.0.16",
     "@types/react-dom": "18.0.6",
+    "@types/tailwindcss": "^3.1.0",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
     "sass": "^1.54.3",
