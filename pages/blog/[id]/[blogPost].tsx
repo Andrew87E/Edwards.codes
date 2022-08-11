@@ -36,4 +36,4 @@ return(
 
 }
 
-
+export default BlogPost
