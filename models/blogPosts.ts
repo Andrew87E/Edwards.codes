@@ -12,9 +12,13 @@ const blogSchema = new Schema(
             required: [true, "Please provide your name"],
             MaxLength: [60, "Name can not be longer than 60 characters"],
         },
+        image: {
+            type: String,
+            required: [true, "Please provide an image hosted by imgur"],
+        },
         body: String,
         comments: [{ body: String, date: Date }],
-        date: {
+        postDate: {
             type: Date,
             default: Date.now,
         },

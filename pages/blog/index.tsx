@@ -9,7 +9,6 @@ const Blog: GetStaticProps = () => {
   return (
     <>
       <Navbar />
-      <Jumbotron />
       <BlogCards />
       <Footer />
     </>

@@ -7,7 +7,7 @@ export interface BlogType {
         body: string
         date: Date
     }]
-    date: Date
+    postDate: Date
     hidden: boolean
     meta: {
         votes: number
