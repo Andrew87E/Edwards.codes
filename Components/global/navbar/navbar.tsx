@@ -8,7 +8,7 @@ export const Navbar: React.FC = () => {
       <li className="list-none font-bold text-lg cursor-pointer">
         <Link href="/">
           <span className="text-xl flex items-center">
-            <figure className="transform hover:scale-75 transition-transform duration-500 bg-black mt-4 p-1">
+            <figure className="transform hover:scale-75 transition-transform duration-500 bg-transparent mt-4 p-1">
               <Image
                 src="/icons/portfolio-logo.svg"
                 width="80"
