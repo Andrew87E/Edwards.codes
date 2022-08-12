@@ -7,12 +7,12 @@ module.exports = {
     optimizeUniversalDefaults: true,
   },
   content: [
-    './pages/**/*.tsx',
-    './components/**/*.tsx',
-    './layouts/**/*.tsx',
-    './lib/**/*.ts',
+    './pages/**/*.{html,js,ts,jsx,tsx}',
+    './components/**/*.{html,js,ts,jsx,tsx}',
+    './layouts/**/*.{html,js,ts,jsx,tsx}',
+    './lib/**/*.{html,js,ts,jsx,tsx}',
     './data/**/*.mdx',
-    './next/**/*.{js,ts,jsx,tsx}'
+    './next/**/*.{html,js,ts,jsx,tsx}'
   ],
   darkMode: 'class',
   theme: {
