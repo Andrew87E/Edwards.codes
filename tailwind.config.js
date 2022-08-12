@@ -12,6 +12,7 @@ module.exports = {
     './layouts/**/*.tsx',
     './lib/**/*.ts',
     './data/**/*.mdx',
+    './next/**/*.{js,ts,jsx,tsx}'
   ],
   darkMode: 'class',
   theme: {
