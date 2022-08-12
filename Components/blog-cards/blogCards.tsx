@@ -5,7 +5,9 @@ import { useRouter } from 'next/router'
 import axios from 'axios'
 import type { BlogType } from '../../types/blog'
 import moment from 'moment'
+import { resolveHref } from 'next/dist/shared/lib/router/router'
 
+type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 
 export const BlogCards: React.FC = () => {
     const [blogPost, setBlogPost] = useState([])
@@ -18,17 +20,18 @@ useEffect(()=>{
     })
 }, [])
 
+
 const renderCards = () => {
     return(
         blogPost.map((blog: BlogType)=>{
             
             const postDate = moment(blog.postDate).format('MM-DD-YYYY')
         return (
-            <>
-    <div className="2xl:mr-20 xl:w-1/3 sm:w-5/12 sm:max-w-xs relative mb-32 lg:mb-20 xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0" key={blog._id}>
+    <div key={blog._id} className="2xl:mr-20 xl:w-1/3 sm:w-5/12 sm:max-w-xs relative mb-32 lg:mb-20 xl:max-w-sm lg:w-1/2 w-11/12 mx-auto sm:mx-0">
+      <div>
         <div className="shadow h-64 rounded">
             <Link 
-            href='/blog/[id]'
+            href={`/blog/${blog._id}`}
             className="href"
             >
             <a>
@@ -37,6 +40,7 @@ const renderCards = () => {
             alt="STUFF" 
             className="h-full w-full object-cover overflow-hidden rounded" 
             layout='fill'
+            priority
             />
             </a>
             </Link>
@@ -47,11 +51,11 @@ const renderCards = () => {
             <p className="text-lg text-gray-800 text-center pb-3">{blog.body}</p> 
             <h3 className="text-sm text-gray-800 text-center">
                 {postDate} by {' '}
-                <a href="javascript:void(0)"><span className="text-indigo-700 cursor-pointer">{blog.author}</span></a>
+                <a href="https://github.com/andrew87e"><span className="text-indigo-700 cursor-pointer">{blog.author}</span></a>
             </h3>
         </div>
+      </div>
     </div>
-            </>
         )
     })
     )
