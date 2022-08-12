@@ -18,14 +18,12 @@ useEffect(()=>{
     axios.get(`/api/blog/get`).then(res =>{
         const response = res.data
         if (res.data === `${pageId}`){
-            tempArr.push()
+            tempArr.push(res.data)
+            setBlogPost(res.data)
         }
         console.log(res.data)
-        setBlogPost(thisPost)
     })
-}, [pageId])
-
-
+}, [pageId, tempArr])
 
 const renderPost = () => { 
     return (
