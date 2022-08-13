@@ -4,6 +4,6 @@
 
 module.exports = {
   images: {
-    domains: ['cdn.tuk.dev'],
+    domains: ['i.imgur.com'],
   },
 }

@@ -7,14 +7,26 @@ const blogSchema = new Schema(
             required: [true, "Please provide a title for the blog post"],
             maxLength: [100, "Title can not be longer than 100 characters"],
         },
+        header: {
+            type: String,
+            required: [true, "Please provide a header for your post"],
+            maxLength: [78, "Please keep your header under 78 characters"],
+        },
+        img: {
+            type: String,
+            required: [
+                true,
+                "Please link an image for your blog post from imgur",
+            ],
+            maxLength: [
+                100,
+                "Please keep your img source under 100 characters, use imgur!",
+            ],
+        },
         author: {
             type: String,
             required: [true, "Please provide your name"],
             MaxLength: [60, "Name can not be longer than 60 characters"],
-        },
-        image: {
-            type: String,
-            required: [true, "Please provide an image hosted by imgur"],
         },
         body: String,
         comments: [{ body: String, date: Date }],

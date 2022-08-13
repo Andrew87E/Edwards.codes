@@ -1,7 +1,7 @@
 
 export const AnimatedLetters: React.FC = () => {
   return (
-    <article>
+    <article className="ae-intro-container">
         {"Andrew".split("").map((letter, index) => {
             return (
              <span

@@ -9,15 +9,17 @@ import colors from "colors";
 
 export default async function getBlog(req: any, res: any) {
     try {
-        console.log("CONNECTING TO MONGO".cyan);
+        console.log('GETALL.TS')
+        console.log("CONNECTING TO MONGO");
+        
         await connectMongo();
-        console.log("CONNECTED TO MONGO!".rainbow);
+        console.log("CONNECTED TO MONGO!");
 
         console.log("GETTING DOCUMENT".red);
-        const blog = await Blog.find().then((data) => {
-            res.status(200).json(data)
-        })
-        console.log("GOT DOCUMENT!".rainbow);
+        const blog = await Blog.find()
+
+        res.status(200).json(blog)
+        console.log("GOT DOCUMENT!");
 
     } catch (error) {
         console.log(error);

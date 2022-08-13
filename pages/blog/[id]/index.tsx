@@ -8,22 +8,18 @@ import { BlogType } from '../../../types/blog';
 import moment from 'moment';
 
 export const BlogPost: GetStaticProps = () => {
-    const [blogPost, setBlogPost] = useState([])
+    const [blogPost, setBlogPost] = useState<BlogType[]>([])
     const router = useRouter()
     const thisPage = router.query
     const pageId = thisPage.id
-    let tempArr = []
 
 useEffect(()=>{
-    axios.get(`/api/blog/get`).then(res =>{
+    axios.get(`/api/blog/get/${pageId}`).then(res =>{
         const response = res.data
-        if (res.data === `${pageId}`){
-            tempArr.push(res.data)
-            setBlogPost(res.data)
-        }
-        console.log(res.data)
+        setBlogPost(response)
+        console.log('RESPONSE FROM PAGE ID', response)
     })
-}, [pageId, tempArr])
+}, [pageId])
 
 const renderPost = () => { 
     return (
@@ -31,27 +27,24 @@ const renderPost = () => {
         
         const postDate = moment(blog.postDate).format('MM-DD-YYYY')
     return(
-        <><article className='w-full h-10 text-white border'>
+        <><article className='w-full h-10 text-white border flex w-full'>
             <h1>{blog.title}</h1>
         </article><article className='w-full h-72'>
                 <p className='text-white w-full'>
                     Put the body here
-
-                    Sint reprehenderit ipsum minim consequat do anim elit consectetur. Occaecat ad enim eu ullamco eiusmod esse in tempor ullamco aliquip ipsum laborum. Sunt in laborum elit enim cupidatat aliqua deserunt occaecat voluptate qui incididunt velit aliqua commodo.
-                    Quis officia Lorem minim elit in esse. Fugiat reprehenderit aliquip deserunt minim adipisicing ipsum amet consequat dolor eu occaecat aliquip est. Incididunt irure labore enim consequat anim. Ad excepteur nisi consectetur sint non velit enim mollit. Mollit sint do eu occaecat ex minim.
-                    Dolor incididunt pariatur cillum sit enim. Enim id velit pariatur sit Lorem officia magna et culpa in eiusmod labore adipisicing. Cillum dolor occaecat minim magna ad elit do nostrud deserunt. Irure ullamco ut ad ex Lorem occaecat officia est aute ad incididunt aute. Eu voluptate occaecat proident cillum. Occaecat ut elit pariatur ex mollit reprehenderit id nostrud officia ipsum. Pariatur in sit pariatur labore nostrud dolore eiusmod irure mollit.
+                    {blog.body}
                 </p>
 
             </article><section>
                 {/* Make this dynamic based on comments */}
                 <Link href="/post/[id]/[comment]" as={`/post/${blog._id}/first-comment`}>
-                    <a>First comment</a>
+                    <a>First comment (not working yet)</a>
                 </Link>
 
             </section></>
-    )
+)
 })
-    )
+)
 }
 
 
@@ -67,3 +60,4 @@ return(
 }
 
 export default BlogPost
+ 
