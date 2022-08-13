@@ -1,6 +1,5 @@
 import connectMongo from "../../../utils/connectMongo";
 import Blog from "../../../models/blogPosts";
-import colors from "colors";
 
 /**
  * @param {import('next').NextApiRequest} req
@@ -11,11 +10,10 @@ export default async function getBlog(req: any, res: any) {
     try {
         console.log('GETALL.TS')
         console.log("CONNECTING TO MONGO");
-        
         await connectMongo();
         console.log("CONNECTED TO MONGO!");
 
-        console.log("GETTING DOCUMENT".red);
+        console.log("GETTING DOCUMENT");
         const blog = await Blog.find()
 
         res.status(200).json(blog)
