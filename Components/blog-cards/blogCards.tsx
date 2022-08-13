@@ -81,9 +81,41 @@ if (isLoading) {
 return(
     <div className="pt-16 w-full h-full">
     <div className="mb-10">
-        <h1 className="xl:text-5xl pt-4 xl:pt-0 text-3xl text-white text-center font-extrabold mb-4 ae-blog-title">My Blog Posts</h1>
+        <h1 className="xl:text-5xl pt-4 xl:pt-0 text-3xl text-white text-center font-extrabold mb-4 ae-blog-title">
+            {"My Blog Posts".split("").map((letter, index) => {
+            return (
+             <span
+              key={index}
+              className="transition-all cursor-default duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 xl:text-5xl pt-4 xl:pt-0 text-3xl text-white text-center font-extrabold mb-4 ae-blog-title"
+             >
+              {letter}
+             </span>
+         );
+        })} 
+        </h1>
         <p className="text-xl text-white text-center xl:w-3/5 mx-auto w-11/12 ae-blog-header">
-        &quot;Don&apos;t focus on having a great blog. Focus on producing a blog that’s great for your readers.” As a blogger, everything you do flows from understanding your audience and seeking to help them.
+        {"”Don’t focus on having a great blog. Focus on producing a blog that’s great for your readers.”".split("").map((letter, index) => {
+            return (
+             <span
+              key={index}
+              className="transition-all cursor-default duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white text-2xl ae-blog-quote"
+             >
+              {letter}
+             </span>
+         );
+        })}        
+        </p>
+        <p className="text-xl text-white text-center xl:w-3/5 mx-auto w-11/12 ae-blog-header">
+            {"As a blogger, everything you do flows from understanding your audience and seeking to help them.".split("").map((letter, index) => {
+            return (
+             <span
+              key={index}
+              className="transition-all cursor-default duration-700 hover:duration-100 hover:scale-125 hover:text-indigo-500 pt-4 xl:pt-0 text-xl text-white text-center ae-blog-sub-quote"
+             >
+              {letter}
+             </span>
+         );
+        })} 
         </p>
     </div>
     <div className="inline-flex flex-wrap justify-between ae-blog-container w-11/12 h-full m-10">
