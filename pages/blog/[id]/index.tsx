@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
-import { Footer, Jumbotron, Navbar } from '../../../Components';
+import { Footer, Jumbotron, Navbar, Page } from '../../../Components';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import { BlogType } from '../../../types/blog';
@@ -56,12 +56,14 @@ const renderPost = () => {
 
 return(
     <>
-    <Navbar />
+    <Page
+    currentPage='Blog'
+    meta={{ desc: "My blog post!" }}    
+    >
     <main className='w-full h-full text-white mt-20'>
         {renderPost()}
     </main>
-
-    <Footer />
+    </Page>
     </>
 )
 

@@ -1,14 +1,17 @@
-import { Footer, Jumbotron, Navbar } from "../Components";
+import { Jumbotron, Page } from "../Components";
 import React from "react";
 import { GetStaticProps } from "next";
 
 const About: GetStaticProps = () => {
     return (
         <>
-            <Navbar />
+            <Page
+            currentPage="About Me"
+            meta={{ desc: "Some info about myself!" }}
+            >
             <Jumbotron />
+            </Page>
 
-            <Footer />
         </>
     );
 };

@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { Footer, Navbar, Jumbotron, Hero, BlogCards, Snow, LoginForm } from "../../Components";
+import { Footer, Navbar, Jumbotron, Hero, BlogCards, Snow, LoginForm, Page } from "../../Components";
 
 
 const Blog: GetStaticProps = () => {
@@ -9,10 +9,13 @@ const Blog: GetStaticProps = () => {
   return (
     <>
       <Snow />
-      <Navbar />
+      <Page
+      currentPage="Blog"
+      meta={{ desc: "My blog page!" }}
+      >
       <BlogCards />
       <LoginForm />
-      <Footer />
+      </Page>
     </>
   );
 };

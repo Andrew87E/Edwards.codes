@@ -1,4 +1,4 @@
-import { Footer, Jumbotron, ProjectCards, Navbar, Page } from "../Components";
+import { Jumbotron, ProjectCards, Page } from "../Components";
 import React from "react";
 import { GetStaticProps } from "next";
 
