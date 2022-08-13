@@ -80,8 +80,6 @@ if (isLoading) {
         <Jumbotron />
         <Jumbotron />
         <Jumbotron />
-        <Jumbotron />
-        <Jumbotron />
     </div>
     )
 } else {

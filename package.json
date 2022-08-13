@@ -40,7 +40,6 @@
     "@types/node": "18.6.4",
     "@types/react": "18.0.16",
     "@types/react-dom": "18.0.6",
-    "@types/tailwindcss": "^3.1.0",
     "eslint": "8.21.0",
     "eslint-config-next": "12.2.4",
     "sass": "^1.54.3",
