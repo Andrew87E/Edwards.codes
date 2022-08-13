@@ -16,4 +16,4 @@ const createAccount: GetStaticProps = () => {
 }
 
 
-
+export default createAccount
