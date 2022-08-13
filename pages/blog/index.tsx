@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { Footer, Navbar, Jumbotron, Hero, BlogCards, Snow } from "../../Components";
+import { Footer, Navbar, Jumbotron, Hero, BlogCards, Snow, LoginForm } from "../../Components";
 
 
 const Blog: GetStaticProps = () => {
@@ -11,6 +11,7 @@ const Blog: GetStaticProps = () => {
       <Snow />
       <Navbar />
       <BlogCards />
+      <LoginForm />
       <Footer />
     </>
   );

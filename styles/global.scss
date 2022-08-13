@@ -43,13 +43,12 @@ font-weight: 700;
 }
 
 .ae-nav-btn {
-    display: none;
     position: absolute;
     right: 10px;
     top: 7px;
     padding: 5px;
-    color: #000;
-    font-size: 18px;
+    color: #fff;
+    font-size: 30px;
 }
 
 .ae-blog-title {
@@ -64,39 +63,39 @@ font-weight: 700;
     cursor: default;
 }
 
-@media screen and (max-width: 768px) {
-    .ae-nav-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        border-top: 1pxsolid #fff;
-        position: absolute;
-        top: 80px;
-        left: -110%;
-        opacity: 1;
-        transition: all 0.5s ease;
-    }
+// @media screen and (max-width: 768px) {
+//     .ae-nav-menu {
+//         display: flex;
+//         flex-direction: column;
+//         width: 100%;
+//         border-top: 1pxsolid #fff;
+//         position: absolute;
+//         top: 80px;
+//         left: -110%;
+//         opacity: 1;
+//         transition: all 0.5s ease;
+//     }
 
-    .ae-nav-menu.active {
-        background: #1f5156;
-        left: 0px;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-    }
+//     .ae-nav-menu.active {
+//         background: #1f5156;
+//         left: 0px;
+//         opacity: 1;
+//         transition: all 0.5s ease;
+//         z-index: 1;
+//     }
 
-    .ae-nav-btn {
-        // removes default border on button element
-        display: block;
-        color: white;
-        :hover {
-            background-color: #2642af;
-        }
-    }
-    .ae-nav-links {
-        display: block;
-    }
-}
+//     .ae-nav-btn {
+//         // removes default border on button element
+//         display: block;
+//         color: white;
+//         :hover {
+//             background-color: #2642af;
+//         }
+//     }
+//     .ae-nav-links {
+//         display: block;
+//     }
+// }
 
 .ae-blog-card {
     margin: 55px;
