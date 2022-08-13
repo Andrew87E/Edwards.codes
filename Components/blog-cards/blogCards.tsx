@@ -6,6 +6,7 @@ import axios from 'axios'
 import type { BlogType } from '../../types/blog'
 import moment from 'moment'
 import { resolveHref } from 'next/dist/shared/lib/router/router'
+import { Jumbotron } from '../global/jumbotron/jumbotron'
 
 type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 
@@ -74,6 +75,13 @@ if (isLoading) {
         <div>A</div>
         <div>O</div>
         <div>L</div>
+        <Jumbotron />
+        <Jumbotron />
+        <Jumbotron />
+        <Jumbotron />
+        <Jumbotron />
+        <Jumbotron />
+        <Jumbotron />
     </div>
     )
 } else {
