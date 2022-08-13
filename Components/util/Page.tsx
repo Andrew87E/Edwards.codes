@@ -41,12 +41,9 @@ export const Page = ({ currentPage, meta: { title, desc }, children }: PageProps
             </Head>
 
             <main>
-            <nav className="fixed top-0 right-0 left-0 items-center justify-between bg-transparent ae-nav">
-                <div className="">
+            <nav className="fixed top-0 right-0 left-0 h-16 inline-flex drop-shadow-lg items-center justify-between bg-transparent ae-nav">
+                <div className="w-full flex items-center justify-between">
                 <Navbar currentPage={currentPage} />
-                </div>
-                <div className="md:hidden">
-                <MobileMenu />
                 </div>
             </nav>
 

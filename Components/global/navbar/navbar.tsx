@@ -14,10 +14,10 @@ export const Navbar = ({currentPage}: any) => {
 
   return (
     <>
-        <div className="list-none font-bold text-lg cursor-pointer">
+        <div className="list-none font-bold text-lg">
           <Link href="/">
             <span className="text-xl flex items-center">
-              <figure className="transform hover:scale-75 transition-transform duration-500 bg-transparent mt-4 p-1">
+              <figure className="cursor-pointer transform hover:scale-75 transition-transform duration-500 bg-transparent mt-4 p-1">
                 <Image
                   src="/icons/portfolio-logo.svg"
                   width="80"
@@ -28,7 +28,7 @@ export const Navbar = ({currentPage}: any) => {
                 return (
                   <span
                     key={index}
-                    className="font-mono transition-all duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white"
+                    className="cursor-pointer font-mono transition-all duration-700 hover:duration-100 hover:scale-125 hover:translate-y-1 hover:text-lime-500 text-white"
                   >
                     {letter}
                   </span>
@@ -38,13 +38,13 @@ export const Navbar = ({currentPage}: any) => {
           </Link>
         </div>
 
-        <ul className="mr-4">
+        <ul className="nav-menu inline-flex mr-4 flex-wrap ae-nav-links">
           {
             routes.map((item, index)=>{
               return (
                 <li
                 key={index}
-                className={`inline-flex mr-5 hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 ${
+                className={`mr-5 hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 ${
                   currentPage === item.title
                   ? "opacity-100 text-lime-500 hover:text-white"
                   : "opacity-40 hover:opacity-100 transition-opacity text-white hover:text-lime-500"
