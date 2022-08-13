@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router'
-import { Navbar } from '../../../Components';
+import { Footer, Jumbotron, Navbar } from '../../../Components';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import { BlogType } from '../../../types/blog';
@@ -23,25 +23,31 @@ useEffect(()=>{
 
 const renderPost = () => { 
     return (
-    blogPost.map((blog: BlogType)=>{
+    Array.from(blogPost).map((blog: BlogType)=>{
         
         const postDate = moment(blog.postDate).format('MM-DD-YYYY')
     return(
-        <><article className='w-full h-10 text-white border flex w-full'>
-            <h1>{blog.title}</h1>
-        </article><article className='w-full h-72'>
-                <p className='text-white w-full'>
-                    Put the body here
+        <section key={blog._id} className="">
+        <article className='w-full text-white flex text-center'>
+            <h1 className='w-full font-serif text-6xl'>{blog.title}</h1>
+        </article>
+        {' '}
+        <article className='w-full h-72 my-20 flex flex-wrap'>
+                <p className='text-white w-8/12 text-center justify-center m-auto'>
                     {blog.body}
-                </p>
 
-            </article><section>
+                </p>
+                   
+            </article>
+            <section className='m-20 flex flex-wrap'>
+            <article className='mr-4'>{postDate}</article>
                 {/* Make this dynamic based on comments */}
                 <Link href="/post/[id]/[comment]" as={`/post/${blog._id}/first-comment`}>
-                    <a>First comment (not working yet)</a>
+                    <a></a>
                 </Link>
 
-            </section></>
+            </section>
+            </section>
 )
 })
 )
@@ -51,10 +57,12 @@ const renderPost = () => {
 return(
     <>
     <Navbar />
-    <main className='w-10/12 h-full border border-white text-white mt-20 '>
+    <main className='w-full h-full text-white mt-20'>
         {renderPost()}
-        <h1>This is a page</h1>
-    </main></>
+    </main>
+
+    <Footer />
+    </>
 )
 
 }

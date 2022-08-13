@@ -11,12 +11,14 @@ type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 
 export const BlogCards: React.FC = () => {
     const [blogPost, setBlogPost] = useState([])
+    const [isLoading, setLoading] = useState(true)
     const router = useRouter()
   
 useEffect(()=>{
     axios.get('api/blog/getAll').then(res =>{
         setBlogPost(res.data)
         console.info(res.data)
+        setLoading(false)
     })
 }, [])
 
@@ -62,19 +64,33 @@ const renderCards = () => {
     )
 }
 
+if (isLoading) {
+    return(
+    <div id="load">
+        <div>G</div>
+        <div>N</div>
+        <div>I</div>
+        <div>D</div>
+        <div>A</div>
+        <div>O</div>
+        <div>L</div>
+    </div>
+    )
+} else {
 
 return(
-
     <div className="pt-16 w-full h-full">
     <div className="mb-10">
         <h1 className="xl:text-5xl pt-4 xl:pt-0 text-3xl text-white text-center font-extrabold mb-4 ae-blog-title">My Blog Posts</h1>
         <p className="text-xl text-white text-center xl:w-3/5 mx-auto w-11/12 ae-blog-header">
-         Don&apos;t focus on having a great blog. Focus on producing a blog that’s great for your readers.” As a blogger, everything you do flows from understanding your audience and seeking to help them.
+        &quot;Don&apos;t focus on having a great blog. Focus on producing a blog that’s great for your readers.” As a blogger, everything you do flows from understanding your audience and seeking to help them.
         </p>
     </div>
     <div className="inline-flex flex-wrap justify-between ae-blog-container w-11/12 h-full m-10">
     {renderCards()}
     </div>
 </div>
- )
+
+  )
+ }
 }
