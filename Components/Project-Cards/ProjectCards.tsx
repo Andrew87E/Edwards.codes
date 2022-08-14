@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const ProjectCards: React.FC = () => {
   return (
-    <main className="inline-flex flex-wrap">
+    <section className="inline-flex flex-wrap ae-project-card">
       {/* 1st card */}
       <div className="transform transition duration-500 hover:scale-125 flex justify-center bg-black m-10">
         <div className="rounded-lg shadow-lg bg-black max-w-sm">
@@ -38,6 +38,6 @@ export const ProjectCards: React.FC = () => {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   );
 };

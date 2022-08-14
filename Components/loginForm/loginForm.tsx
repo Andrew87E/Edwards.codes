@@ -1,6 +1,6 @@
 import  React from 'react'
 
-const loginForm: React.FC = () => {
+export const LoginForm: React.FC = () => {
 
 
     return(
@@ -50,5 +50,4 @@ const loginForm: React.FC = () => {
 
     )
 }
-
 

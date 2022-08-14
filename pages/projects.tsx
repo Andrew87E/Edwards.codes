@@ -1,13 +1,15 @@
-import { Footer, Jumbotron, ProjectCards, Navbar } from "../Components";
+import { Jumbotron, ProjectCards, Page } from "../Components";
 import React from "react";
 import { GetStaticProps } from "next";
 
 const Projects: GetStaticProps = () => {
     return (
-        <>
-            <Navbar />
+
+        <Page 
+        currentPage="Projects"
+        meta={{ desc:"Check out my work so far!" }}
+        >
             <Jumbotron />
-            <Jumbotron />
             <ProjectCards />
             <ProjectCards />
             <ProjectCards />
@@ -16,8 +18,8 @@ const Projects: GetStaticProps = () => {
             <ProjectCards />
             <ProjectCards />
             <ProjectCards />
-            <Footer />
-        </>
+        </Page>
+    
     );
 };
 
