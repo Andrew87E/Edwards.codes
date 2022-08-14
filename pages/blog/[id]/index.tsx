@@ -21,10 +21,10 @@ useEffect(()=>{
 }, [pageId])
 
 const pretty = () => {
-    const regex = `/n`
+    const marker = `<script>`
     const body = blogPost[0].body
-    const br = ``
-    return(body.replaceAll(regex, br))
+    const regexp = `i tried to do something bad`
+    return(body.replaceAll(marker, regexp))
 }
 
 const renderPost = () => { 
@@ -38,10 +38,10 @@ const renderPost = () => {
             <h1 className='w-full font-serif text-6xl'>{blog.title}</h1>
         </article>
         <article className='w-full my-20 flex flex-wrap'>
-                <p className='text-white w-8/12 text-center justify-center m-auto'>
-                    {pretty()}
+                <div className='text-white w-8/12 text-left justify-center m-auto'>
+                    {<div dangerouslySetInnerHTML={{ __html: pretty()}} />}
                
-                </p>
+                </div>
                    
             </article>
             <section className='m-20 flex flex-wrap'>
