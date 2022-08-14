@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
 import {routes} from "../../../data/global"
 import { HiOutlineX } from "react-icons/hi";
 import { RiMenu3Line } from 'react-icons/ri'
@@ -10,6 +9,11 @@ import { Name } from "./name";
 export const MobileMenu = ({currentPage}: any) => {
 const [showMenu, setShowMenu] = useState(false)
 
+useEffect(() => {
+  return function cleanup() {
+    document.body.style.overflow = "";
+  };
+}, []);
 
 const handleClick = () => {
     setShowMenu(current => !current)
@@ -32,7 +36,7 @@ const handleClick = () => {
         </button>
 
         {showMenu ?
-        <ul className="list-none inline-block fixed right-0 top-16 ae-mobile-menu border-t border-b w-36 h-60"> 
+        <ul className="list-none inline-block fixed right-0 top-16 ae-mobile-menu border-t border-b w-36 h-60 bg-black"> 
         {/* // use position not mt */}
         {
             routes.map((item, index)=>{
