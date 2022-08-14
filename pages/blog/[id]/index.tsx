@@ -17,9 +17,15 @@ useEffect(()=>{
     axios.get(`/api/blog/get/${pageId}`).then(res =>{
         const response = res.data
         setBlogPost(response)
-        console.log('RESPONSE FROM PAGE ID', response)
     })
 }, [pageId])
+
+const pretty = () => {
+    const regex = `/n`
+    const body = blogPost[0].body
+    const br = ``
+    return(body.replaceAll(regex, br))
+}
 
 const renderPost = () => { 
     return (
@@ -31,11 +37,10 @@ const renderPost = () => {
         <article className='w-full text-white flex text-center'>
             <h1 className='w-full font-serif text-6xl'>{blog.title}</h1>
         </article>
-        {' '}
-        <article className='w-full h-72 my-20 flex flex-wrap'>
+        <article className='w-full my-20 flex flex-wrap'>
                 <p className='text-white w-8/12 text-center justify-center m-auto'>
-                    {blog.body}
-
+                    {pretty()}
+               
                 </p>
                    
             </article>
@@ -60,9 +65,9 @@ return(
     currentPage='Blog'
     meta={{ desc: "My blog post!" }}    
     >
-    <main className='w-full h-full text-white mt-20'>
+    <article className='w-full h-full text-white mt-20'>
         {renderPost()}
-    </main>
+    </article>
     </Page>
     </>
 )
