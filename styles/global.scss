@@ -63,6 +63,14 @@ font-weight: 700;
     cursor: default;
 }
 
+.ae-mobile-menu {
+    z-index: 1000;
+}
+
+.ae-project-card {
+    z-index: -10;
+}
+
 // @media screen and (max-width: 768px) {
 //     .ae-nav-menu {
 //         display: flex;

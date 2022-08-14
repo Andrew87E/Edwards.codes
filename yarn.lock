@@ -3808,6 +3808,7 @@ __metadata:
     tsparticles-preset-links: ^2.2.0
     tw-elements: ^1.0.0-alpha12
     typescript: 4.7.4
+    use-delayed-render: ^0.0.7
     webpack: ^5.74.0
   languageName: unknown
   linkType: soft
@@ -5383,6 +5384,15 @@ __metadata:
     file-loader:
       optional: true
   checksum: c1122a992c6cff70a7e56dfc2b7474534d48eb40b2cc75467cde0c6972e7597faf8e43acb4f45f93c2473645dfd803bcbc20960b57544dd1e4c96e77f72ba6fd
+  languageName: node
+  linkType: hard
+
+"use-delayed-render@npm:^0.0.7":
+  version: 0.0.7
+  resolution: "use-delayed-render@npm:0.0.7"
+  peerDependencies:
+    react: ^16.13.1
+  checksum: b3df38536f81f9497865c3a18a37820d24086141a0546a4b484caeb248f25e01e5b3479d812c08395a021136ae93d0aa7df35855ca2301c0a28fa7a8325f82d4
   languageName: node
   linkType: hard
 
