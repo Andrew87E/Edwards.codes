@@ -6,6 +6,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import { BlogType } from '../../../types/blog';
 import moment from 'moment';
+import createDOMPurify from 'dompurify'
+
 
 export const BlogPost: GetStaticProps = () => {
     const [blogPost, setBlogPost] = useState<BlogType[]>([])
@@ -26,6 +28,7 @@ const pretty = () => {
     const regexp = `i tried to do something bad`
     return(body.replaceAll(marker, regexp))
 }
+
 
 const renderPost = () => { 
     return (

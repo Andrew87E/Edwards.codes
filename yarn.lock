@@ -370,6 +370,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/dompurify@npm:^2.3.3":
+  version: 2.3.3
+  resolution: "@types/dompurify@npm:2.3.3"
+  dependencies:
+    "@types/trusted-types": "*"
+  checksum: 427e2dc60d94d13d7860a293b926b376727cb2f545a3334a3f2e7de695a2bb23058dd15108e49e0651378229b443ee8ae0028034b6f2df9a9008c04fb7ad6f8f
+  languageName: node
+  linkType: hard
+
 "@types/eslint-scope@npm:^3.7.3":
   version: 3.7.4
   resolution: "@types/eslint-scope@npm:3.7.4"
@@ -456,6 +465,13 @@ __metadata:
   version: 0.16.2
   resolution: "@types/scheduler@npm:0.16.2"
   checksum: b6b4dcfeae6deba2e06a70941860fb1435730576d3689225a421280b7742318d1548b3d22c1f66ab68e414f346a9542f29240bc955b6332c5b11e561077583bc
+  languageName: node
+  linkType: hard
+
+"@types/trusted-types@npm:*":
+  version: 2.0.2
+  resolution: "@types/trusted-types@npm:2.0.2"
+  checksum: 3371eef5f1c50e1c3c07a127c1207b262ba65b83dd167a1c460fc1b135a3fb0c97b9f508efebd383f239cc5dd5b7169093686a692a501fde9c3f7208657d9b0d
   languageName: node
   linkType: hard
 
@@ -1585,6 +1601,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dompurify@npm:^2.3.10":
+  version: 2.3.10
+  resolution: "dompurify@npm:2.3.10"
+  checksum: ee343876b4c065e82d194818c66af76a6d2290264c7db583ad71761c11781fd626f0245f9f4670175d5707c4b8fcfb89adae80bed0418a9426a47ee7f36b0ffc
+  languageName: node
+  linkType: hard
+
 "electron-to-chromium@npm:^1.4.202":
   version: 1.4.211
   resolution: "electron-to-chromium@npm:1.4.211"
@@ -2443,6 +2466,13 @@ __metadata:
   dependencies:
     function-bind: ^1.1.1
   checksum: b9ad53d53be4af90ce5d1c38331e712522417d017d5ef1ebd0507e07c2fbad8686fffb8e12ddecd4c39ca9b9b47431afbb975b8abf7f3c3b82c98e9aad052792
+  languageName: node
+  linkType: hard
+
+"himalaya@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "himalaya@npm:1.1.0"
+  checksum: b07c165e78b22f031515de61d82c97702e8552ba1c4748fde60a97973178d2e380b9eb75dea602bbcc9c2eb1ca2948e125aac6c1f3bfc9f56b92b09df8124af3
   languageName: node
   linkType: hard
 
@@ -3779,12 +3809,14 @@ __metadata:
     "@reduxjs/toolkit": ^1.8.3
     "@tailwindcss/forms": ^0.5.2
     "@tailwindcss/typography": ^0.5.4
+    "@types/dompurify": ^2.3.3
     "@types/node": 18.6.4
     "@types/react": 18.0.16
     "@types/react-dom": 18.0.6
     autoprefixer: ^10.4.8
     axios: ^0.27.2
     colors: ^1.4.0
+    dompurify: ^2.3.10
     eslint: 8.21.0
     eslint-config-next: 12.2.4
     moment: ^2.29.4
@@ -3800,6 +3832,7 @@ __metadata:
     react-icons: ^4.4.0
     react-particles: ^2.2.0
     react-tsparticles: ^2.2.0
+    safely-set-inner-html: ^0.1.0
     sass: ^1.54.3
     sharp: ^0.30.7
     swr: ^1.3.0
@@ -3976,7 +4009,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -4099,6 +4132,17 @@ __metadata:
   dependencies:
     loose-envify: ^1.1.0
   checksum: 88e38092da8839b830cda6feef2e8505dec8ace60579e46aa5490fc3dc9bba0bd50336507dc166f43e3afc1c42939c09fe33b25fae889d6f402721dcd78fca1b
+  languageName: node
+  linkType: hard
+
+"react@npm:^16.4.2":
+  version: 16.14.0
+  resolution: "react@npm:16.14.0"
+  dependencies:
+    loose-envify: ^1.1.0
+    object-assign: ^4.1.1
+    prop-types: ^15.6.2
+  checksum: 8484f3ecb13414526f2a7412190575fc134da785c02695eb92bb6028c930bfe1c238d7be2a125088fec663cc7cda0a3623373c46807cf2c281f49c34b79881ac
   languageName: node
   linkType: hard
 
@@ -4278,6 +4322,16 @@ __metadata:
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
   checksum: b99c4b41fdd67a6aaf280fcd05e9ffb0813654894223afb78a31f14a19ad220bba8aba1cb14eddce1fcfb037155fe6de4e861784eb434f7d11ed58d1e70dd491
+  languageName: node
+  linkType: hard
+
+"safely-set-inner-html@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "safely-set-inner-html@npm:0.1.0"
+  dependencies:
+    himalaya: ^1.1.0
+    react: ^16.4.2
+  checksum: 56d44b86c76ec5d6f7ece442a4cb5b20741a5596a326feb80bfec7da749e0a88255134b10a5d90bc86af1b7810a65cf310a526b9826ca24f76ee01a31cb05b52
   languageName: node
   linkType: hard
 

@@ -29,7 +29,10 @@ const blogSchema = new Schema(
             MaxLength: [60, "Name can not be longer than 60 characters"],
         },
         body: String,
-        comments: [{ body: String, date: Date }],
+        comments: [{ 
+            body: String, 
+            date: Date 
+        }],
         postDate: {
             type: Date,
             default: Date.now,

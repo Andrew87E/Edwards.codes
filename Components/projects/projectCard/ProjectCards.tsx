@@ -1,7 +1,21 @@
 import React, { useState } from "react";
 import Image from "next/image";
+import { URL, Url } from "url";
 
-export const ProjectCards: React.FC = () => {
+type ProjectProps = {
+  project: string
+  desc: string
+  github: string
+  deploy: {
+    url?: string | Url
+    alt?: string | Url
+  } 
+  children?: JSX.Element | JSX.Element[]
+
+}
+
+export const ProjectCards = ({ project, desc, github, deploy: { url, alt }, children}: ProjectProps) => {
+  
   return (
     <section className="inline-flex flex-wrap ae-project-card">
       {/* 1st card */}
