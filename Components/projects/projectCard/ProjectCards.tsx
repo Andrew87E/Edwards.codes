@@ -3,33 +3,41 @@ import Image from "next/image";
 import { URL, Url } from "url";
 
 type ProjectProps = {
-  project: string
-  desc: string
-  github: string
+  project: string;
+  desc: string;
+  github?: string;
   deploy: {
-    url?: string | Url
-    alt?: string | Url
-  } 
-  children?: JSX.Element | JSX.Element[]
+    url?: string | Url;
+    alt?: string | Url;
+  };
+  img: string;
+  children?: JSX.Element | JSX.Element[];
+};
 
-}
-
-export const ProjectCards = ({ project, desc, github, deploy: { url, alt }, children}: ProjectProps) => {
-  
+export const ProjectCards = ({
+  project,
+  desc,
+  github,
+  deploy: { url, alt },
+  img,
+  children,
+}: ProjectProps) => {
   return (
     <section className="inline-flex flex-wrap ae-project-card">
       {/* 1st card */}
       <div className="transform transition duration-500 hover:scale-125 flex justify-center bg-black m-10">
         <div className="rounded-lg shadow-lg bg-black max-w-sm">
           <a
-            href="#!"
+            href={github}
+            rel="noopener noreferrer"
+            target="_blank"
             data-mdb-ripple="true"
             data-mdb-ripple-color="light"
             className="bg-black"
           >
             <Image
               className=" rounded-t-lg bg-black"
-              src="/img/thatsame1jpg.jpg"
+              src={img}
               height="250"
               width="400"
               alt="My Project"
@@ -37,18 +45,12 @@ export const ProjectCards = ({ project, desc, github, deploy: { url, alt }, chil
           </a>
           <div className="p-6 bg-black">
             <h5 className="text-gray-900 text-xl font-medium mb-2 bg-transparent">
-              Card title
+              {project}
             </h5>
             <p className="text-gray-700 text-base mb-4 bg-transparent">
-              Some quick example text to build on the card title and make up the
-              bulk of the card&apos;s content.
+              {desc}
             </p>
-            <button
-              type="button"
-              className=" inline-block px-6 py-2.5 bg-white text-black font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-            >
-              Button
-            </button>
+          {children}
           </div>
         </div>
       </div>
