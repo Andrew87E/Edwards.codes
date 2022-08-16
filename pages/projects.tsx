@@ -17,7 +17,8 @@ const Projects: GetStaticProps = () => {
                 desc="A simple weather app using the Open Weather API"
                 deploy={{ url: 'https://github.com', alt: 'github link' }}
                 img=''
-                github="https://github.com" />
+                github="https://github.com" 
+                />
         </Page>
         </>
     
