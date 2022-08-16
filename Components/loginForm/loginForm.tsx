@@ -166,13 +166,16 @@ export const LoginForm: React.FC = () => {
                                     </button>
                                     <div className="text-sm font-medium text-gray-500">
                                         Not registered?
-                                        <a
+                                        <Link
                                             href="/createAccount"
-                                            className="text-lime-500 hover:underline"
                                         >
+                                        <a
+                                            className="text-lime-500 hover:underline"
+                                            >
                                             {" "}
                                             Create account
                                         </a>
+                                            </Link>
                                     </div>
                                 </form>
                             </div>

@@ -4,6 +4,10 @@
 
 module.exports = {
   images: {
-    domains: ['i.imgur.com'],
+    domains: [
+      'i.imgur.com',
+      'lh3.googleusercontent.com',
+      's.gravatar.com',
+  ],
   },
 }

@@ -3,7 +3,6 @@ import React from "react";
 import { Footer, Navbar, Jumbotron, Hero, Intro, FavProjects, ParticlesContainer, Page } from "../Components";
 
 
-
 const Home: GetStaticProps = () => {
 
   return (
