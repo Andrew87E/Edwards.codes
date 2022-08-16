@@ -44,10 +44,10 @@ export const ProjectCards = ({
             />
           </a>
           <div className="p-6 bg-black">
-            <h5 className="text-gray-900 text-xl font-medium mb-2 bg-transparent">
+            <h5 className="text-lime-500 text-xl font-medium mb-2 bg-transparent">
               {project}
             </h5>
-            <p className="text-gray-700 text-base mb-4 bg-transparent">
+            <p className="text-gray-50 text-base mb-4 bg-transparent">
               {desc}
             </p>
           {children}
