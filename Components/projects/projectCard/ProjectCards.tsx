@@ -25,7 +25,7 @@ export const ProjectCards = ({
   return (
     <section className="inline-flex flex-wrap ae-project-card">
       {/* 1st card */}
-      <div className="transform transition duration-500 hover:scale-125 flex justify-center bg-black m-10">
+      <div className="transform transition duration-500 hover:scale-105 flex justify-center bg-black m-10">
         <div className="rounded-lg shadow-lg bg-black max-w-sm">
           <a
             href={github}
