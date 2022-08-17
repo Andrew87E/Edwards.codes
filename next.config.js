@@ -8,6 +8,7 @@ module.exports = {
       'i.imgur.com',
       'lh3.googleusercontent.com',
       's.gravatar.com',
+      'https://avatars.githubusercontent.com/',
   ],
   },
 }
