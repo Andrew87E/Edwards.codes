@@ -19,7 +19,7 @@ export default async function getBlog(req: any, res: any) {
         console.log(getId);
         console.log("GETTING DOCUMENT");
 
-        const blog = await new Blog;
+        const blog = await new Blog(req.body);
 
         res.status(200).json({ success: true, data: blog });
 

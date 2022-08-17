@@ -14,9 +14,12 @@ export default async function getBlog(req: any, res: any) {
         console.log("CONNECTED TO MONGO!");
 
         console.log("GETTING DOCUMENT");
-        const blog = await Blog.find()
-
+        const blog = await new Blog(req.body)
+        
         res.status(200).json(blog)
+        
+        blog.find()
+
         console.log("GOT DOCUMENT!");
 
     } catch (error) {
