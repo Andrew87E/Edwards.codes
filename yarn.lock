@@ -554,6 +554,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/mongoose@npm:^5.11.97":
+  version: 5.11.97
+  resolution: "@types/mongoose@npm:5.11.97"
+  dependencies:
+    mongoose: "*"
+  checksum: 54c896814a92898535eb8965f90308f2661b75f4a53e28405802fbe9f90ba7d37140f151b1e291e08555a1700d3486911104c108ed02a94c6feddeab6bd3bfea
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*, @types/node@npm:18.6.4":
   version: 18.6.4
   resolution: "@types/node@npm:18.6.4"
@@ -3555,7 +3564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mongoose@npm:^6.5.2":
+"mongoose@npm:*, mongoose@npm:^6.5.2":
   version: 6.5.2
   resolution: "mongoose@npm:6.5.2"
   dependencies:
@@ -4171,6 +4180,7 @@ __metadata:
     "@tailwindcss/typography": ^0.5.4
     "@types/dompurify": ^2.3.3
     "@types/jquery": ^3.5.14
+    "@types/mongoose": ^5.11.97
     "@types/node": 18.6.4
     "@types/react": 18.0.16
     "@types/react-dom": 18.0.6

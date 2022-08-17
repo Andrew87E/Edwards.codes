@@ -14,14 +14,17 @@ export default async function getBlog(req: any, res: any) {
 
         await connectMongo();
         console.log("CONNECTED TO MONGO!");
-        
+
         const { getId } = req.query;
         console.log(getId);
         console.log("GETTING DOCUMENT");
-        
-        const blog = await Blog.find({ _id: getId }).exec();
-        res.status(200).json(blog);
-        
+
+        const blog = await new Blog;
+
+        res.status(200).json({ success: true, data: blog });
+
+        blog.find({ _id: getId }).exec();
+
         console.log("GOT DOCUMENT!");
     } catch (error) {
         console.log(error);
