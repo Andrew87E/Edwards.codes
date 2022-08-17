@@ -1,28 +1,23 @@
 import connectMongo from "../../../utils/connectMongo";
 import Blog from "../../../models/blogPosts";
-
 /**
  * @param {import('next').NextApiRequest} req
  * @param {import('next').NextApiResponse} res
  */
 
-export default async function addBlog(req: any, res: any) {
+export default async function getBlog(req, res) {
     try {
+        console.log('GETALL.TS')
         console.log("CONNECTING TO MONGO");
-
         await connectMongo();
+        console.log("CONNECTED TO MONGO!");
 
-        console.log("CONNECTED TO MONGO");
+        console.log("GETTING DOCUMENT");
+        const blog = await Blog.find()
 
-        console.log("CREATING DOCUMENT");
+        res.status(200).json(blog)
+        console.log("GOT DOCUMENT!");
 
-        const blog = await new Blog(req.body);
-
-        res.status(200).json({ success: true, data: blog });
-
-        blog.save();
-
-        console.log("CREATED DOCUMENT");
     } catch (error) {
         console.log(error);
         res.json({ error });

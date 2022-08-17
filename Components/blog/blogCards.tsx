@@ -8,12 +8,10 @@ import moment from 'moment'
 import { Jumbotron } from '../global/jumbotron/jumbotron'
 import { useUser } from '@auth0/nextjs-auth0'
 
-type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 
 export const BlogCards: React.FC = () => {
     const [blogPost, setBlogPost] = useState([])
     const [isLoading, setLoading] = useState(true)
-    const router = useRouter()
     const { user } = useUser();
 
   

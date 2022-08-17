@@ -7,24 +7,21 @@ import colors from "colors";
  * @param {import('next').NextApiResponse} res
  */
 
-export default async function getBlog(req: any, res: any) {
+export default async function getBlog(req, res) {
     try {
         console.log("GETID.TS");
         console.log("CONNECTING TO MONGO");
 
         await connectMongo();
         console.log("CONNECTED TO MONGO!");
-
+        
         const { getId } = req.query;
         console.log(getId);
         console.log("GETTING DOCUMENT");
-
-        const blog = await new Blog(req.body);
-
-        res.status(200).json({ success: true, data: blog });
-
-        blog.find({ _id: getId }).exec();
-
+        
+        const blog = await Blog.find({ _id: getId }).exec();
+        res.status(200).json(blog);
+        
         console.log("GOT DOCUMENT!");
     } catch (error) {
         console.log(error);
