@@ -45,8 +45,8 @@ export const Navbar = ({ currentPage }: any) => {
                     ></Image>
                 </button>
               :
-              <Link href="/api/auth/login" onClick={handleDrop}>
-                <a className="text-white hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 mt-4 opacity-70 mr-5 hover:text-white hover:opacity-100">
+              <Link href="/api/auth/login" >
+                <a className="text-white hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 mt-4 opacity-70 mr-5 hover:text-white hover:opacity-100" onClick={handleDrop}>
                   Log In
                 </a>
             </Link >

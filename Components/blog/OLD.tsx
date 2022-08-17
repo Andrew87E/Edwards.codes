@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
+import { useUser } from "@auth0/nextjs-auth0";
 
-export const LoginForm: React.FC = () => {
+export const NewPost: React.FC = () => {
+    const { user, error, isLoading } = useUser();
     const [showModal, setShowModal] = useState(false);
-    const [showModalBtn, setModalBtn] = useState(true);
-
+console.log(user)
     const handleModal = () => {
         setShowModal((current) => !current);
     };
@@ -13,7 +14,7 @@ export const LoginForm: React.FC = () => {
         <>
             {showModal ? (
                 <div
-                    id="authentication-modal"
+                    id="new-post"
                     tabIndex={-1}
                     aria-hidden="true"
                     className="overflow-y-auto overflow-x-hidden fixed top-52 right-0 left-0 z-50 w-full md:inset-0 h-modal md:h-full justify-center items-center flex"
@@ -184,7 +185,7 @@ export const LoginForm: React.FC = () => {
                 </div>
             ) : null}
 
-            {showModalBtn ? (
+            {user ? (
                 <button
                     className="block text-white bg-transparent hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center border border-lime-500 rounded-full"
                     type="button"

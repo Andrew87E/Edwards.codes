@@ -5,13 +5,10 @@ export { Navbar } from "./global/navbar/navbar";
 export { ProjectCards } from "./projects/projectCard/ProjectCards";
 export { FavProjects } from "./favProjects/favProjects";
 export { Intro } from "./Intro/intro";
-export { BlogCards } from "./blog-cards/blogCards";
+export { BlogCards } from "./blog/blogCards";
 export { ParticlesContainer } from "./particles/links";
 export { AnimatedLetters } from "./letters/letters";
 export { Snow } from "./particles/snow";
-export { LoginForm } from "./loginForm/loginForm";
 export { MobileMenu } from "./global/navbar/mobileMenu";
-export {Page} from './util/Page'
-
-
-
+export { Page } from "./util/Page";
+export { NewPost } from "./blog/newPost";

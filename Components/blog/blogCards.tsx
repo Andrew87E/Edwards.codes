@@ -6,6 +6,7 @@ import axios from 'axios'
 import type { BlogType } from '../../types/blog'
 import moment from 'moment'
 import { Jumbotron } from '../global/jumbotron/jumbotron'
+import { useUser } from '@auth0/nextjs-auth0'
 
 type ButtonEvent = React.MouseEvent<HTMLButtonElement>;
 
@@ -13,6 +14,8 @@ export const BlogCards: React.FC = () => {
     const [blogPost, setBlogPost] = useState([])
     const [isLoading, setLoading] = useState(true)
     const router = useRouter()
+    const { user } = useUser();
+
   
 useEffect(()=>{
     axios.get('api/blog/getAll').then(res =>{
@@ -31,7 +34,7 @@ const renderCards = () => {
         return (
     <div key={blog._id} className="ae-blog-card hover:scale-105 xl:w-1/3 sm:w-5/12 sm:max-w-xs relative mb-32 lg:mb-20 xl:max-w-sm lg:w-1/2 w-11/12 sm:mx-0">
       <div>
-        <div className="shadow h-64 rounded">
+        <div className="shadow h-64 rounded-full relative">
             <Link 
             href={`/blog/${blog._id}`}
             className="href"
@@ -40,7 +43,7 @@ const renderCards = () => {
             <Image 
             src={blog.img} 
             alt="STUFF" 
-            className="h-full w-full object-cover overflow-hidden rounded" 
+            className="h-full w-full rounded" 
             layout='fill'
             priority
             data-mdb-ripple="true"
@@ -48,9 +51,8 @@ const renderCards = () => {
             </a>
             </Link>
         </div>
-        <div className="p-6 shadow-lg w-11/12 mx-auto -mt-20 bg-gray-700 rounded z-20 relative mb-4">
-            <p className="uppercase text-sm text-lime-500 text-center pb-3 bg-gray-700">{blog.title}</p>
-                        {/* set this to blog.header */}
+        <div className="p-6 w-11/12 mx-auto -mt-24 bg-gray-900 rounded-3xl z-20 relative mb-4">
+            <p className="uppercase text-sm text-lime-500 text-center pb-3 bg-transparent">{blog.title}</p>
             <p className="text-lg text-white text-center pb-3">{blog.header}</p> 
             <h3 className="text-sm text-white text-center">
                 {postDate} by {' '}
@@ -126,6 +128,16 @@ return(
     <div className="inline-flex flex-wrap justify-between ae-blog-container w-11/12 h-full m-10">
     {renderCards()}
     </div>
+    {user ?
+    <button 
+    className='block text-white bg-transparent hover:bg-gray-900 hover:bg-opacity-40 focus:ring-4 focus:outline-none focus:ring-lime-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center border border-lime-500 rounded-full'
+    type="button"
+    >
+        <Link href="/blog/newpost">
+            <a> Create a post </a>
+            </Link>
+    </button>
+: null}
 </div>
 
   )

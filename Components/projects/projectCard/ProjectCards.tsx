@@ -7,8 +7,8 @@ type ProjectProps = {
   desc: string;
   github?: string;
   deploy: {
-    url?: string | Url;
-    alt?: string | Url;
+    url?: string;
+    alt?: string;
   };
   img: string;
   children?: JSX.Element | JSX.Element[];
@@ -28,7 +28,7 @@ export const ProjectCards = ({
       <div className="transform transition duration-500 hover:scale-105 flex justify-center bg-black m-10">
         <div className="rounded-lg shadow-lg bg-black max-w-sm">
           <a
-            href={github}
+            href={url}
             rel="noopener noreferrer"
             target="_blank"
             data-mdb-ripple="true"
@@ -36,7 +36,7 @@ export const ProjectCards = ({
             className="bg-black"
           >
             <Image
-              className=" rounded-t-lg bg-black"
+              className=" rounded-t-lg"
               src={img}
               height="250"
               width="400"
