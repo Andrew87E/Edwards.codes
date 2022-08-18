@@ -3,14 +3,22 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Footer, Jumbotron, Navbar, Page } from "../../../Components";
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import axios, { Axios } from "axios";
 import { BlogType } from "../../../types/blog";
 import moment from "moment";
 import createDOMPurify from "dompurify";
 import DOMPurify from "dompurify";
+import { useUser } from "@auth0/nextjs-auth0";
+
+type btnProps = {
+    className?: string;
+    onClick?: React.MouseEventHandler<HTMLButtonElement>;
+};
 
 export const BlogPost: GetStaticProps = () => {
+    const { user, error, isLoading } = useUser();
     const [blogPost, setBlogPost] = useState<BlogType[]>([]);
+    const [deleteBtn, setDeleteBtn] = useState(false);
     const router = useRouter();
     const thisPage = router.query;
     const pageId = thisPage.id;
@@ -67,12 +75,38 @@ export const BlogPost: GetStaticProps = () => {
         });
     };
 
+    const deleteButton = () => {
+        if (user?.email === blogPost[0]?.userEmail) {
+            return (
+                <button
+                    className="bg-transparent border font-sans text-lg rounded-full hover:bg-red-600 p-2 text-white"
+                    onClick={() => handleDelete()}
+                    key={Math.floor(Math.random() * 69)}
+                >
+                    Delete Post
+                </button>
+            );
+        }
+    };
+
+    const handleDelete = () => {
+        axios
+            .delete(`/api/blog/delete/${pageId}`, {
+                params: `${pageId}`,
+            })
+            .then((res) => {
+                console.log(res);
+                console.log(`POST ${pageId} DELETED`);
+            });
+    };
+
     return (
         <>
             <Page currentPage="Blog" meta={{ desc: "My blog post!" }}>
                 <article className="w-full h-full text-white mt-20">
                     {renderPost()}
                 </article>
+                {deleteButton()}
             </Page>
         </>
     );

@@ -25,6 +25,7 @@ export const NewPost: React.FC = () => {
                         img: `${img}`,
                         author: `${author}`,
                         body: `${body}`,
+                        userEmail: `${user.email}`
                     })
                     .then((res) => {
                         console.log(res);

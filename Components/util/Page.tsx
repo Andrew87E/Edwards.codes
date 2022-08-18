@@ -12,7 +12,7 @@ type PageProps = {
         title?: string
         desc?: string
     }
-    children?: JSX.Element | JSX.Element[]
+    children?: JSX.Element|React.ReactNode
 }
 
 

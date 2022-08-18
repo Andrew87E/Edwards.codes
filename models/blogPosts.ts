@@ -9,8 +9,8 @@ const blogSchema = new Schema(
         },
         header: {
             type: String,
-            required: [true, "Please provide a header for your post"],
-            maxLength: [78, "Please keep your header under 78 characters"],
+            required: [true, "Please provide a summary for your post"],
+            maxLength: [78, "Please keep your summary under 78 characters"],
         },
         img: {
             type: String,
@@ -42,6 +42,7 @@ const blogSchema = new Schema(
             votes: Number,
             favs: Number,
         },
+        userEmail: String,
     },
     {
         collection: "Blog",

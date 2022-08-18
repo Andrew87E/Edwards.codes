@@ -1,4 +1,5 @@
 export interface BlogType {
+    userEmail?: string
     header: string
     _id?: number
     title: string

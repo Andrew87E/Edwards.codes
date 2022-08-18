@@ -1,4 +1,4 @@
-import { Footer, Jumbotron, ProjectCards, Navbar, Page } from "../Components";
+import { Footer, Jumbotron, ProjectCards, Navbar, Page, WordCloud } from "../Components";
 import React from "react";
 import { GetStaticProps } from "next";
 
@@ -12,6 +12,7 @@ const Projects: GetStaticProps = () => {
 
 
             <Jumbotron />
+            <WordCloud />
             </Page>
 
     );
@@ -19,30 +20,6 @@ const Projects: GetStaticProps = () => {
 
 
 
-// skills
-// html
-// css
-// js
-// ts
-// react 
-// mongo db
-// express
-// nodejs
-// mysql
-// redux
-// linux
-// git
-// firebase
-// vercel
-// nextjs
-// sass
-// tailwindcss
-// bootstrap
-// bash
-// jest
 // seo
-// jquery
-// nodejs
-// docker
 
 export default Projects;

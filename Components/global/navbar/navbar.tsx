@@ -5,6 +5,8 @@ import { Name } from "./name";
 import { useUser } from "@auth0/nextjs-auth0";
 import Image from "next/image";
 
+// show log in button if user is on blog page
+
 export const Navbar = ({ currentPage }: any) => {
     const { user, error, isLoading } = useUser();
     const [drop, setDrop] = useState(false);
@@ -15,6 +17,20 @@ export const Navbar = ({ currentPage }: any) => {
             setDrop((current) => !current);
         }
     };
+
+    const handleLogin = () => {
+        if(currentPage === 'Blog') {
+            return(
+          <Link href="/api/auth/login" >
+            <a className="text-white hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 mt-4 opacity-70 mr-5 hover:text-white hover:opacity-100" onClick={handleDrop}>
+              Log In
+            </a>
+        </Link >)} else {
+            return(
+                null
+            )
+        }
+    }
 
     return (
         <>
@@ -44,12 +60,7 @@ export const Navbar = ({ currentPage }: any) => {
                         className="rounded-full"
                     ></Image>
                 </button>
-              :
-              <Link href="/api/auth/login" >
-                <a className="text-white hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 mt-4 opacity-70 mr-5 hover:text-white hover:opacity-100" onClick={handleDrop}>
-                  Log In
-                </a>
-            </Link >
+              : handleLogin()
               }
                 {user && drop ? (
                     <div
