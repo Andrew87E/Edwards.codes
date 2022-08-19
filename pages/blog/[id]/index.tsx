@@ -1,7 +1,7 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Jumbotron, Page } from "../../../Components";
+import { Comments, Jumbotron, Page } from "../../../Components";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BlogType } from "../../../types/blog";
@@ -51,9 +51,13 @@ export const BlogPost: GetStaticProps = () => {
                                 href="/post/[id]/[comment]"
                                 as={`/post/${blog._id}/first-comment`}
                             >
-                                <a></a>
+                                <a>  
+                                </a>
                             </Link>
                         </section>
+                            <section className="text-white border h-28">
+                                Add Comment
+                            </section>
                     </section>
                     <Jumbotron />
                 </>

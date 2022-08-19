@@ -1,9 +1,8 @@
-import { Date } from 'mongoose'
-import React, {useEffect} from 'react'
+import React from 'react'
 
 type comments = [{
     body: string
-    date: Date
+    date: string
 }]
 
 type meta = {
@@ -15,7 +14,7 @@ export const Comments: React.FC = (comments: comments, meta: meta) => {
     //map through comments and display them
     const renderComments = () => {
         
-        return comments.map((comment: {body: string, date: Date}) => {
+        return comments.map((comment) => {
             return (
                 <div key={comment.date} className="flex flex-col items-center justify-center">
                     <p className="text-lg text-white text-center pb-3">{comment.body}</p>
@@ -28,6 +27,9 @@ export const Comments: React.FC = (comments: comments, meta: meta) => {
         }
         )
     }
+
+    
+
     return (
         <div className="flex flex-col items-center justify-center">
             {renderComments()}

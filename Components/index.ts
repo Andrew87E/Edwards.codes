@@ -13,4 +13,4 @@ export { MobileMenu } from "./global/navbar/mobileMenu";
 export { Page } from "./util/Page";
 export { NewPost } from "./blog/newPost";
 export { WordCloud } from './tagCloud/tagCloud'
-
+export {Comments} from './blog/comments'
