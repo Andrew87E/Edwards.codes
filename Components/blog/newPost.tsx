@@ -2,7 +2,6 @@ import React, { MouseEventHandler, useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
 import axios from "axios";
-import { redirect } from "next/dist/server/api-utils";
 import $ from "jquery";
 
 export const NewPost: React.FC = () => {
@@ -25,7 +24,7 @@ export const NewPost: React.FC = () => {
                         img: `${img}`,
                         author: `${author}`,
                         body: `${body}`,
-                        userEmail: `${user.email}`
+                        userEmail: `${user.email}`,
                     })
                     .then((res) => {
                         console.log(res);
@@ -38,7 +37,7 @@ export const NewPost: React.FC = () => {
     return (
         <>
             <div className="relative p-4 md:min-w-full min-h-full mt-20">
-                <div className="relative rounded-3xl bg-gray-900 border border-lime-500">
+                <div className="relative rounded-3xl bg-black border border-lime-500">
                     <div className="py-6 px-6 lg:px-8">
                         <h3 className="mb-10 text-center font-medium text-white dark:text-white">
                             {"Make a new post"
@@ -105,7 +104,10 @@ export const NewPost: React.FC = () => {
                             />
                             <div className="flex flex-wrap ">
                                 <div className="w-full md:w-6/12">
-                                    <label className="inline-block mb-2 text-sm font-medium text-gray-200 " htmlFor="summary">
+                                    <label
+                                        className="inline-block mb-2 text-sm font-medium text-gray-200 "
+                                        htmlFor="summary"
+                                    >
                                         {"Summary (Appears on the Card) Max Length 78"
                                             .split("")
                                             .map((letter, index) => {
@@ -129,7 +131,10 @@ export const NewPost: React.FC = () => {
                                 </div>
 
                                 <div className="w-full mb-10">
-                                    <label className="inline-block mb-2 text-sm font-medium text-gray-200 " htmlFor="image">
+                                    <label
+                                        className="inline-block mb-2 text-sm font-medium text-gray-200 "
+                                        htmlFor="image"
+                                    >
                                         {"Image Link (Appears on the Card) Must be from Imgur"
                                             .split("")
                                             .map((letter, index) => {
@@ -158,7 +163,7 @@ export const NewPost: React.FC = () => {
                                     htmlFor="body"
                                     className="block mb-2 text-sm font-medium text-gray-200"
                                 >
-                                    {"Body (In Html Format)"
+                                    {"Body (Markdown)"
                                         .split("")
                                         .map((letter, index) => {
                                             return (
@@ -174,7 +179,7 @@ export const NewPost: React.FC = () => {
                                 <textarea
                                     name="body"
                                     id="body"
-                                    placeholder="Body (HTML)"
+                                    placeholder="Write Your Post Here"
                                     className="border-lime-500 border bg-transparent text-sm rounded focus:ring-lime-500 focus:border-lime-500 w-full placeholder-white text-white h-96"
                                     required
                                 />

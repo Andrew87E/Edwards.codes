@@ -6,7 +6,7 @@ import Blog from "../../../../models/blogPosts";
  * @param {import('next').NextApiResponse} res
  */
 
-export default async function deleteBlog(req, res) {
+export default async function updateBlog(req, res) {
     try {
         console.log("CONNECTING TO MONGO");
         await connectMongo();

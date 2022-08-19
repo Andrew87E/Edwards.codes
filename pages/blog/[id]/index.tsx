@@ -1,27 +1,23 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Footer, Jumbotron, Navbar, Page } from "../../../Components";
+import { Jumbotron, Page } from "../../../Components";
 import React, { useState, useEffect } from "react";
-import axios, { Axios } from "axios";
+import axios from "axios";
 import { BlogType } from "../../../types/blog";
 import moment from "moment";
-import createDOMPurify from "dompurify";
-import DOMPurify from "dompurify";
 import { useUser } from "@auth0/nextjs-auth0";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-type btnProps = {
-    className?: string;
-    onClick?: React.MouseEventHandler<HTMLButtonElement>;
-};
 
 export const BlogPost: GetStaticProps = () => {
-    const { user, error, isLoading } = useUser();
+    const { user } = useUser();
     const [blogPost, setBlogPost] = useState<BlogType[]>([]);
-    const [deleteBtn, setDeleteBtn] = useState(false);
     const router = useRouter();
     const thisPage = router.query;
     const pageId = thisPage.id;
+
 
     useEffect(() => {
         axios.get(`/api/blog/get/${pageId}`).then((res) => {
@@ -29,12 +25,6 @@ export const BlogPost: GetStaticProps = () => {
             setBlogPost(response);
         });
     }, [pageId]);
-
-    const pretty = () => {
-        const body = blogPost[0].body;
-        let clean = DOMPurify.sanitize(body, { USE_PROFILES: { html: true } });
-        return clean;
-    };
 
     const renderPost = () => {
         return Array.from(blogPost).map((blog: BlogType) => {
@@ -49,13 +39,9 @@ export const BlogPost: GetStaticProps = () => {
                         </article>
                         <article className="w-full my-20 flex flex-wrap">
                             <div className="text-white w-8/12 text-left justify-center m-auto">
-                                {
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                            __html: pretty(),
-                                        }}
-                                    />
-                                }
+                                <Markdown remarkPlugins={[remarkGfm]}>
+                                {blog.body}
+                                </Markdown>
                             </div>
                         </article>
                         <section className="m-20 flex flex-wrap">
@@ -90,14 +76,10 @@ export const BlogPost: GetStaticProps = () => {
     };
 
     const handleDelete = () => {
-        axios
-            .delete(`/api/blog/delete/${pageId}`, {
-                params: `${pageId}`,
-            })
-            .then((res) => {
-                console.log(res);
-                console.log(`POST ${pageId} DELETED`);
-            });
+        axios.delete(`/api/blog/delete/${pageId}`).then((res) => {
+            console.log(res);
+            console.log(`POST ${pageId} DELETED`);
+        });
     };
 
     return (

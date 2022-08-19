@@ -19,18 +19,21 @@ export const Navbar = ({ currentPage }: any) => {
     };
 
     const handleLogin = () => {
-        if(currentPage === 'Blog') {
-            return(
-          <Link href="/api/auth/login" >
-            <a className="text-white hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 mt-4 opacity-70 mr-5 hover:text-white hover:opacity-100" onClick={handleDrop}>
-              Log In
-            </a>
-        </Link >)} else {
-            return(
-                null
-            )
+        if (currentPage === "Blog") {
+            return (
+                <Link href="/api/auth/login">
+                    <a
+                        className="text-white hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 mt-4 opacity-70 mr-5 hover:text-white hover:opacity-100"
+                        onClick={handleDrop}
+                    >
+                        Log In
+                    </a>
+                </Link>
+            );
+        } else {
+            return null;
         }
-    }
+    };
 
     return (
         <>
@@ -50,18 +53,22 @@ export const Navbar = ({ currentPage }: any) => {
                         </li>
                     );
                 })}
-                { user ?
-                <button className=" mt-3 hover:scale-90" onClick={handleDrop}>
-                    <Image
-                        alt={user?.name ?? "current user"}
-                        height="32"
-                        width="32"
-                        src={user?.picture ?? "/img/default-profile.jpg"}
-                        className="rounded-full"
-                    ></Image>
-                </button>
-              : handleLogin()
-              }
+                {user ? (
+                    <button
+                        className=" mt-3 hover:scale-90"
+                        onClick={handleDrop}
+                    >
+                        <Image
+                            alt={user?.name ?? "current user"}
+                            height="32"
+                            width="32"
+                            src={user?.picture ?? "/img/default-profile.jpg"}
+                            className="rounded-full"
+                        ></Image>
+                    </button>
+                ) : (
+                    handleLogin()
+                )}
                 {user && drop ? (
                     <div
                         className="z-50 fixed right-0 top-16 text-white list-none rounded divide-y shadow bg-gray-900 divide-gray-100 mr-2"
