@@ -11,7 +11,7 @@ const blogSchema = new Schema(
         header: {
             type: String,
             required: [true, "Please provide a summary for your post"],
-            maxLength: [78, "Please keep your summary under 78 characters"],
+            maxLength: [100, "Please keep your summary under 100 characters"],
         },
         img: {
             type: String,

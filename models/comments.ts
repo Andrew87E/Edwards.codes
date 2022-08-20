@@ -3,8 +3,8 @@ import { Schema } from "mongoose";
 const commentSchema = new Schema(
     {
         body: String,
-        date: Date,
-        user: String 
+        date: String,
+        user: String
     }
 )
 
