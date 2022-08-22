@@ -1,8 +1,9 @@
-import React, { MouseEventHandler, useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import React from "react";
 import { useUser } from "@auth0/nextjs-auth0";
 import axios from "axios";
 import $ from "jquery";
+import DOMPurify from "dompurify";
+import { marked } from "marked";
 
 export const NewPost: React.FC = () => {
     const { user, error, isLoading } = useUser();
@@ -13,17 +14,21 @@ export const NewPost: React.FC = () => {
             const title = ($("#title") as any).val();
             const header = ($("#header") as any).val();
             const img = ($("#img") as any).val();
-            const body = ($("#body") as any).val();
+            let body = ($("#body") as any).val();
             if (!author || !title || !header || !img || !body) {
                 return;
             } else {
+                let dirty = body;
+                const clean = () => {
+                    return DOMPurify.sanitize(marked.parse(dirty));
+                };
                 axios
                     .post("/api/blog/add", {
                         title: `${title}`,
                         header: `${header}`,
                         img: `${img}`,
                         author: `${author}`,
-                        body: `${body}`,
+                        body: `${clean}`,
                         userEmail: `${user.email}`,
                     })
                     .then((res) => {
