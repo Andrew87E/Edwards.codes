@@ -33,6 +33,7 @@ export default async function deleteBlog(req, res) {
         console.log("DELETED DOCUMENT");
 
         res.json({ success: true, data: blog });
+        res.redirect(200, '/blog')
     } catch (error) {
         console.log(error);
         res.json({ error });

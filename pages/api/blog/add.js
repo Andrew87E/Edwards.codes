@@ -18,8 +18,7 @@ export default async function addBlog(req, res) {
         
         console.log("CREATED DOCUMENT");
 
-        res.json({ success: true, data: blog });
-
+        res.status(200).json({ success: true, data: blog })
     } catch (error) {
         console.log(error);
         res.json({ error });

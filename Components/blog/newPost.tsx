@@ -4,6 +4,7 @@ import axios from "axios";
 import $ from "jquery";
 import DOMPurify from "dompurify";
 import { marked } from "marked";
+import Router from 'next/router'
 
 export const NewPost: React.FC = () => {
     const { user, error, isLoading } = useUser();
@@ -28,13 +29,14 @@ export const NewPost: React.FC = () => {
                         header: `${header}`,
                         img: `${img}`,
                         author: `${author}`,
-                        body: `${clean}`,
+                        body: `${clean()}`,
                         userEmail: `${user.email}`,
                     })
                     .then((res) => {
                         console.log(res);
                         console.log("RES SENT");
                     });
+                    Router.push("/blog");
             }
         }
     };

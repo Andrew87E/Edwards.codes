@@ -9,6 +9,7 @@ import moment from "moment";
 import { useUser } from "@auth0/nextjs-auth0";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import { redirect } from "next/dist/server/api-utils";
 
 export const BlogPost: GetStaticProps = () => {
     const { user } = useUser();
@@ -29,7 +30,7 @@ export const BlogPost: GetStaticProps = () => {
             const postDate = moment(blog.postDate).format("MM-DD-YYYY");
             return (
                 <>
-                    <section key={blog._id} className="border min-h-screen m-5">
+                    <section key={blog._id} className="min-h-screen m-5">
                         <article className="w-full text-white flex text-center">
                             <h1 className="w-full font-serif text-6xl">
                                 {blog.title}
@@ -37,51 +38,23 @@ export const BlogPost: GetStaticProps = () => {
                         </article>
                         <article className="w-full my-20 flex flex-wrap">
                             <div className="text-white w-8/12 text-left justify-center m-auto">
-                                <Markdown remarkPlugins={[remarkGfm]}>
-                                    {blog.body}
-                                </Markdown>
+                                <div>
+                                {
+                                    <div
+                                        dangerouslySetInnerHTML={{
+                                            __html: blog.body,
+                                        }}
+                                    />
+                                }
+                                </div>
                             </div>
                         </article>
                         <section className="m-20 flex flex-wrap h-14">
                             <article className="mr-4">{postDate}</article>
-                            </section>
-                            {/* Make this dynamic based on comments */}
-                            <section className="border h-56">
-
-                            <Link
-                                href="/post/[id]/[comment]"
-                                as={`/post/${blog._id}/first-comment`}
-                                >
-                                <a>
-                                    Display Comments Here
-                                </a>
-                            </Link>
-                                </section>
-                        <section className="text-white border">
-                            Add Comment
-                            <form>
-                                <label htmlFor="name" className="text-lime-500">
-                                    Name
-                                </label>
-                                <input
-                                    name="name"
-                                    id="name"
-                                    placeholder="Your Name"
-                                    className="border bg-transparent border-lime-500 text-white text-sm rounded-full focus:ring-lime-500 focus:border-lime-500 block h-16 resize-y w-full md:w-4/12 p-2.5 "
-                                ></input>
-                                <label htmlFor="name" className="text-lime-500">
-                                    Comment
-                                </label>
-                                <textarea
-                                    name="comment"
-                                    id="comment"
-                                    placeholder="Your Name"
-                                    className="border bg-transparent border-lime-500 text-white text-sm rounded-3xl focus:ring-lime-500 focus:border-lime-500 block h-16 resize w-full md:w-4/12 p-2.5 "
-                                ></textarea>
-                            </form>
-                            <button className="border rounded-full ">
-                                Submit
-                            </button>
+                        </section>
+                        {/* Make this dynamic based on comments */}
+                        <section>
+                            <Comments />
                         </section>
                     </section>
                     <Jumbotron />
@@ -94,7 +67,7 @@ export const BlogPost: GetStaticProps = () => {
         if (user?.email === blogPost[0]?.userEmail) {
             return (
                 <button
-                    className="bg-transparent border font-sans text-lg rounded-full hover:bg-red-600 p-2 text-white"
+                    className="bg-transparent font-sans text-lg rounded-full hover:bg-red-600 p-2 text-white"
                     onClick={() => handleDelete()}
                     key={Math.floor(Math.random() * 69)}
                 >
@@ -108,13 +81,16 @@ export const BlogPost: GetStaticProps = () => {
         axios.delete(`/api/blog/delete/${pageId}`).then((res) => {
             console.log(res);
             console.log(`POST ${pageId} DELETED`);
+            if(res.status === 200) {
+                location.replace('/blog')
+            }
         });
     };
 
     return (
         <>
             <Page currentPage="Blog" meta={{ desc: "My blog post!" }}>
-                <article className="w-full h-full text-white mt-20">
+                <article className="w-full h-full text-white mt-36 p-4">
                     {renderPost()}
                 </article>
                 {deleteButton()}
