@@ -1,5 +1,5 @@
 import mongoose, { Schema, model } from "mongoose";
-import commentSchema from './comments'
+import Comment from "./comments";
 
 const blogSchema = new Schema(
     {
@@ -30,9 +30,7 @@ const blogSchema = new Schema(
             MaxLength: [60, "Name can not be longer than 60 characters"],
         },
         body: String,
-        comments: [
-            commentSchema
-        ],
+        comments: [Comment],
         postDate: {
             type: Date,
             default: Date.now,
@@ -57,5 +55,4 @@ const Blog = mongoose.models.Blog || model("Blog", blogSchema);
 
 export default Blog;
 
-// use sub doc for comment 
- 
+// use sub doc for comment

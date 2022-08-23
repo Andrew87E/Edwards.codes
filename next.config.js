@@ -9,6 +9,7 @@ module.exports = {
       'lh3.googleusercontent.com',
       's.gravatar.com',
       'avatars.githubusercontent.com/',
+      'github.com',
   ],
   },
 }

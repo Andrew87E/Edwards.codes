@@ -81,10 +81,8 @@ export const BlogPost: GetStaticProps = () => {
         axios.delete(`/api/blog/delete/${pageId}`).then((res) => {
             console.log(res);
             console.log(`POST ${pageId} DELETED`);
-            if(res.status === 200) {
-                location.replace('/blog')
-            }
         });
+        location.replace('/blog')
     };
 
     return (

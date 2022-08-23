@@ -1,59 +1,79 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import { URL, Url } from "url";
+import Link from "next/link";
 
 type ProjectProps = {
-  project: string;
-  desc: string;
-  github?: string;
-  deploy: {
-    url?: string;
-    alt?: string;
-  };
-  img: string;
-  children?: JSX.Element | JSX.Element[];
+    project: string;
+    desc: string;
+    github?: string;
+    deployUrl?: string;
+    alt: string
+    img: string;
+    children?: JSX.Element | JSX.Element[];
 };
 
 export const ProjectCards = ({
-  project,
-  desc,
-  github,
-  deploy: { url, alt },
-  img,
-  children,
+    project,
+    desc,
+    github,
+    deployUrl,
+    img,
+    alt,
+    children,
 }: ProjectProps) => {
-  return (
-    <section className="inline-flex flex-wrap ae-project-card">
-      {/* 1st card */}
-      <div className="transform transition duration-500 hover:scale-105 flex justify-center bg-black m-10">
-        <div className="rounded-lg shadow-lg bg-black max-w-sm">
-          <a
-            href={url}
-            rel="noopener noreferrer"
-            target="_blank"
-            data-mdb-ripple="true"
-            data-mdb-ripple-color="light"
-            className="bg-black"
-          >
-            <Image
-              className=" rounded-t-lg"
-              src={img}
-              height="250"
-              width="400"
-              alt="My Project"
-            />
-          </a>
-          <div className="p-6 bg-black">
-            <h5 className="text-lime-500 text-xl font-medium mb-2 bg-transparent">
-              {project}
-            </h5>
-            <p className="text-gray-50 text-base mb-4 bg-transparent">
-              {desc}
-            </p>
-          {children}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
+    const renderChildren = () => {
+        const childArr: any[] = [];
+        childArr.push(children);
+        console.log("CHILDREN ARRAY", childArr);
+        return childArr.map((children) => {
+            return (
+                <section
+                    key="children.owner.actualStartTime"
+                    className="inline-flex hover:scale-90"
+                >
+                    {children}
+                </section>
+            );
+        });
+    };
+    return (
+        <section className="">
+            <div
+                key={project}
+                className="ae-blog-card hover:scale-105 relative mb-32 lg:mb-20 w-11/12 flex-1 m-5"
+            >
+                <div>
+                    <div className="shadow h-64 rounded-full relative">
+                        <Link href={`${github}`} className="href">
+                            <a>
+                                <Image
+                                    src={img}
+                                    alt="STUFF"
+                                    className="h-full w-full rounded"
+                                    layout="fill"
+                                    priority
+                                    data-mdb-ripple="true"
+                                />
+                            </a>
+                        </Link>
+                    </div>
+                    <div className="p-6 w-11/12 mx-auto -mt-24 bg-gray-900 rounded-3xl z-20 relative mb-4 text-center">
+                        <Link href={`${deployUrl}`} className="hover:underline">
+                        <a className="uppercase text-sm text-lime-500 text-center pb-3 bg-transparent">
+                            {project}
+                        </a>
+                        </Link>
+                        <p className="text-lg text-white text-center pb-3">
+                            {desc}
+                        </p>
+                        <h3 className="text-sm text-white text-center">
+                        </h3>
+                        <section className="text-white flex inline-block flex-wrap flex-row text-2xl">
+                            {renderChildren()}
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 };
