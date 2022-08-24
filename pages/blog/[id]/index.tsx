@@ -60,20 +60,6 @@ export const BlogPost: GetStaticProps = () => {
         });
     };
 
-    const deleteButton = () => {
-        if (user?.email === blogPost[0]?.userEmail || 'andrew@edwards.codes') {
-            return (
-                <button
-                    className="bg-transparent font-sans text-lg rounded-full hover:bg-red-600 p-2 text-white"
-                    onClick={() => handleDelete()}
-                    key={Math.floor(Math.random() * 69)}
-                >
-                    Delete Post
-                </button>
-            );
-        }
-    };
-
     const handleDelete = () => {
         axios.delete(`/api/blog/delete/${pageId}`).then((res) => {
             console.log(res);
@@ -88,7 +74,16 @@ export const BlogPost: GetStaticProps = () => {
                 <article className="w-full h-full text-white mt-36 p-4">
                     {renderPost()}
                 </article>
-                {deleteButton()}
+                {user?.email === blogPost[0]?.userEmail ||
+                user?.email === "andrew@edwards.codes" ? (
+                    <button
+                        className="bg-transparent font-sans text-lg rounded-full hover:bg-red-600 p-2 text-white"
+                        onClick={() => handleDelete()}
+                        key={Math.floor(Math.random() * 69)}
+                    >
+                        Delete Post
+                    </button>
+                ) : null}
             </Page>
         </>
     );

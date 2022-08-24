@@ -4,7 +4,7 @@ import axios from "axios";
 import $ from "jquery";
 import DOMPurify from "dompurify";
 import { marked } from "marked";
-import Router from 'next/router'
+import Router from "next/router";
 
 export const NewPost: React.FC = () => {
     const { user, error, isLoading } = useUser();
@@ -36,7 +36,7 @@ export const NewPost: React.FC = () => {
                         console.log(res);
                         console.log("RES SENT");
                     });
-                    Router.push("/blog");
+                Router.push("/blog");
             }
         }
     };

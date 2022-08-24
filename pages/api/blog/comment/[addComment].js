@@ -7,8 +7,8 @@ export default async function addComment(req, res) {
         console.log("REQ.BODY", req.body);
         const newComment = req.body;
         console.log(newComment);
-        const { addComment } = req.query;
-        const id = addComment;
+        const { urlId } = req.query;
+        const id = urlId;
         console.log("id", id);
 
         const blog = await Blog.findOneandUpdate(

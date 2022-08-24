@@ -7,8 +7,8 @@ export interface BlogType {
     body: string
     img: string
     comments: [{
-        body: string
-        date: Date
+        body?: string
+        date?: Date
     }]
     postDate: Date
     hidden: boolean

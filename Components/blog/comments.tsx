@@ -1,14 +1,39 @@
 import React from "react";
+import $ from 'jquery'
+import moment from 'moment'
+import axios from "axios";
+import { useRouter } from "next/router";
 
 type comments = [
     {
         body: string;
         date: string;
+        author: string;
     },
 ];
 
+
 export const Comments: any = (comments: comments) => {
     //map through comments and display them
+    const router = useRouter();
+    const thisPage = router.query;
+    const pageId = thisPage.id;
+
+    const handleSubmit = () => {
+    const name = $('#name')
+    const body = $('#comment')
+    const date = moment()
+    
+    axios.post(`/api/blog/comment/${pageId}`, {
+        name: `${name}`,
+        body: `${body}`,
+        date: `${date}`,
+    })
+    .then((res)=>{
+        console.log(res)
+    })
+    }
+
 
     const renderComments = () => {
         return comments.map((comment) => {
@@ -59,7 +84,9 @@ export const Comments: any = (comments: comments) => {
                         className="border bg-transparent border-lime-500 text-white text-sm rounded-3xl focus:ring-lime-500 focus:border-lime-500 block h-16 resize w-full md:w-4/12 p-2.5 mb-10"
                     ></textarea>
                 </form>
-                <button className="border rounded-full p-2 hover:border-lime-500 hover:text-lime-500">
+                <button className="border rounded-full p-2 hover:border-lime-500 hover:text-lime-500"
+                onClick={()=>{}}
+                >
                     Submit
                 </button>
             </section>
