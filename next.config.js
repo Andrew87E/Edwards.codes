@@ -10,6 +10,7 @@ module.exports = {
       's.gravatar.com',
       'avatars.githubusercontent.com/',
       'github.com',
+      'imgur.com',
   ],
   },
 }

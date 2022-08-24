@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { Comments, Jumbotron, Page } from "../../../Components";
 import React, { useState, useEffect } from "react";
@@ -7,9 +6,6 @@ import axios from "axios";
 import { BlogType } from "../../../types/blog";
 import moment from "moment";
 import { useUser } from "@auth0/nextjs-auth0";
-import Markdown from "react-markdown";
-import remarkGfm from "remark-gfm";
-import { redirect } from "next/dist/server/api-utils";
 
 export const BlogPost: GetStaticProps = () => {
     const { user } = useUser();
@@ -22,6 +18,7 @@ export const BlogPost: GetStaticProps = () => {
         axios.get(`/api/blog/get/${pageId}`).then((res) => {
             const response = res.data;
             setBlogPost(response);
+            console.log(response);
         });
     }, [pageId]);
 
@@ -39,13 +36,13 @@ export const BlogPost: GetStaticProps = () => {
                         <article className="w-full my-20 flex flex-wrap">
                             <div className="text-white w-8/12 text-left justify-center m-auto">
                                 <div>
-                                {
-                                    <div
-                                        dangerouslySetInnerHTML={{
-                                            __html: blog.body,
-                                        }}
-                                    />
-                                }
+                                    {
+                                        <div
+                                            dangerouslySetInnerHTML={{
+                                                __html: blog.body,
+                                            }}
+                                        />
+                                    }
                                 </div>
                             </div>
                         </article>
@@ -54,7 +51,7 @@ export const BlogPost: GetStaticProps = () => {
                         </section>
                         {/* Make this dynamic based on comments */}
                         <section>
-                            <Comments />
+                            <Comments comments={blog.comments} />
                         </section>
                     </section>
                     <Jumbotron />
@@ -64,7 +61,7 @@ export const BlogPost: GetStaticProps = () => {
     };
 
     const deleteButton = () => {
-        if (user?.email === blogPost[0]?.userEmail) {
+        if (user?.email === blogPost[0]?.userEmail || 'andrew@edwards.codes') {
             return (
                 <button
                     className="bg-transparent font-sans text-lg rounded-full hover:bg-red-600 p-2 text-white"
@@ -82,7 +79,7 @@ export const BlogPost: GetStaticProps = () => {
             console.log(res);
             console.log(`POST ${pageId} DELETED`);
         });
-        location.replace('/blog')
+        location.replace("/blog");
     };
 
     return (

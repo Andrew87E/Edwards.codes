@@ -6,6 +6,7 @@ import type { BlogType } from "../../types/blog";
 import moment from "moment";
 import { Jumbotron } from "../global/jumbotron/jumbotron";
 import { useUser } from "@auth0/nextjs-auth0";
+import Router from "next/router";
 
 export const BlogCards: React.FC = () => {
     const [blogPost, setBlogPost] = useState([]);

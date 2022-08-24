@@ -7,12 +7,9 @@ type comments = [
     },
 ];
 
-type meta = {
-    favs: number;
-};
-
-export const Comments: React.FC = (comments: comments, meta: meta) => {
+export const Comments: any = (comments: comments) => {
     //map through comments and display them
+
     const renderComments = () => {
         return comments.map((comment) => {
             return (
@@ -37,7 +34,7 @@ export const Comments: React.FC = (comments: comments, meta: meta) => {
             <article className="w-full flex h-64">
                 <article className="rounded-3xl w-4/6 p-4">
                     render comments here
-                    </article>
+                </article>
             </article>
 
             <section className="text-white w-full flex-row p-6">

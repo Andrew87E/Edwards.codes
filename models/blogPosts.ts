@@ -1,5 +1,13 @@
 import mongoose, { Schema, model } from "mongoose";
-import Comment from "./comments";
+
+const commentSchema = new Schema({
+    body: String,
+    date: {
+        type: Date,
+        default: Date.now,
+    },
+    user: String,
+});
 
 const blogSchema = new Schema(
     {
@@ -30,7 +38,7 @@ const blogSchema = new Schema(
             MaxLength: [60, "Name can not be longer than 60 characters"],
         },
         body: String,
-        comments: [Comment],
+        comments: [commentSchema],
         postDate: {
             type: Date,
             default: Date.now,
