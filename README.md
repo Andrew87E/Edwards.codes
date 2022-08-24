@@ -13,18 +13,17 @@
 <br />
 <div align="center">
   <a href="https://github.com/andrew87e/next-portfolio">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./public/icons/portfolio-logo.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">project_title</h3>
+<h3 align="center">Andrew's Portfolio</h3>
 
   <p align="center">
-    project_description
-    <br />
-    <a href="https://github.com/andrew87e/next-portfolio"><strong>Explore the docs »</strong></a>
+    My personal website and portfolio
     <br />
     <br />
-    <a href="https://github.com/andrew87e/next-portfolio">View Demo</a>
+    <br />
+    <a href="edwards.codes">View Demo</a>
     ·
     <a href="https://github.com/andrew87e/next-portfolio/issues">Report Bug</a>
     ·
