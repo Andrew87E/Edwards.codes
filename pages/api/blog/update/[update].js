@@ -1,4 +1,4 @@
-import connectMongo from "../../../../../utils/connectMongo";
+import connectMongo from "../../../../utils/connectMongo";
 import Blog from "../../../../../models/blogPosts";
 
 /**
