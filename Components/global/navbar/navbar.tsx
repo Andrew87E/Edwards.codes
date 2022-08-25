@@ -10,7 +10,6 @@ import Image from "next/image";
 export const Navbar = ({ currentPage }: any) => {
     const { user, error, isLoading } = useUser();
     const [drop, setDrop] = useState(false);
-    console.log(user);
 
     const handleDrop = () => {
         if (user) {

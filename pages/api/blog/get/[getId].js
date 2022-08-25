@@ -16,7 +16,6 @@ export default async function getBlog(req, res) {
         console.log("CONNECTED TO MONGO!");
         
         const { getId } = req.query;
-        console.log(getId);
         console.log("GETTING DOCUMENT");
         
         const blog = await Blog.find({ _id: getId }).exec();

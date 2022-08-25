@@ -1,39 +1,22 @@
-import { Blog } from "../../../../models/blogPosts";
+import Blog from "../../../../models/blogPosts";
 import connectMongo from "../../../../utils/connectMongo";
+
+/**
+ * @param {import('next').NextApiRequest} req
+ * @param {import('next').NextApiResponse} res
+ */
 
 export default async function addComment(req, res) {
     try {
-        console.log("REQ.QUERY", req.query);
-        console.log("REQ.BODY", req.body);
+        await connectMongo();
+        console.log("CONNECTED");
         const newComment = req.body;
-        console.log(newComment);
-        const { urlId } = req.query;
-        const id = urlId;
-        console.log("id", id);
+        const getId = req.query.addComment;
+        console.log(req.query.addComment);
+        let update = { newComment };
 
-        const blog = await Blog.findOneandUpdate(
-            { _id: id },
-            { $addToSet: { comments: newComment } },
-            { new: true }
-        ).then((comment) => 
-        !comment
-        ? res.status(404).json({
-          messgae: 'That Didn\'t Work'
-        })
-        :res.json(' created the comment ')
-        );
-
-
+        
         res.status(200).json(blog);
-        // console.log("THIS HIT", blog);
-
-        // .then((app) => {
-        //   console.log("updated???")
-        //   console.log(app)
-        //     !app
-        //         ? res.status(404).json({ message: "nothing with this id!" })
-        //         : res.status(200).json(app);
-        // });
     } catch (err) {
         (err) => res.status(500).json(err);
     }
