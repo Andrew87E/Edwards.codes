@@ -7,6 +7,8 @@ import {
 import React from "react";
 import { GetStaticProps } from "next";
 import { TbApi, TbBrandJavascript, TbBrandBootstrap } from "react-icons/tb";
+import { FcGoogle } from "react-icons/fc";
+import { TiWeatherPartlySunny } from "react-icons/ti";
 import { FaReact, FaSass, FaGithub, FaHtml5, FaCss3Alt } from "react-icons/fa";
 import {
     SiJavascript,
@@ -17,6 +19,9 @@ import {
     SiMongodb,
     SiYarn,
     SiVite,
+    SiVercel,
+    SiNextdotjs,
+    SiBulma,
 } from "react-icons/si";
 import { DiJqueryLogo } from "react-icons/di";
 
@@ -79,8 +84,8 @@ const Projects: GetStaticProps = () => {
                         <FaCss3Alt className="mx-1" />
                         <TbBrandJavascript className="mx-1" />
                         <SiNodedotjs className="mx-1" />
-                        <SiExpress className="mx-1" />
-                        <TbApi className="mx-1" />
+                        <SiExpress className="ml-1" />
+                        <TbApi className="mr-1" />
                     </ProjectCards>
                     <ProjectCards
                         project="GitHub Readme Generator CLI"
@@ -108,7 +113,24 @@ const Projects: GetStaticProps = () => {
                         <TbBrandJavascript className="mx-1" />
                         <DiJqueryLogo className="mx-1" />
                         <TbBrandBootstrap className="mx-1" />
-                        <TbApi className="mx-1" />
+                        <TiWeatherPartlySunny className="ml-1" />
+                        <TbApi className="mr-1" />
+                    </ProjectCards>
+                    <ProjectCards
+                        project="Road Trip planner!"
+                        desc="Get the gas cost of your trip, directions, and a new playlist!"
+                        deployUrl="https://andrew87e.github.io/Travel-Planner/"
+                        alt="Deployed Link"
+                        img="https://user-images.githubusercontent.com/107494937/184215536-2ecdfc8d-1968-4eec-b3e7-9c745902b086.gif"
+                        github="https://github.com/Andrew87E/Travel-Planner"
+                    >
+                        <FaHtml5 className="mx-1" />
+                        <FaSass className="mx-1" />
+                        <TbBrandJavascript className="mx-1" />
+                        <DiJqueryLogo className="mx-1" />
+                        <SiBulma className="mx-1" />
+                        <FcGoogle className="ml-1" />
+                        <TbApi />
                     </ProjectCards>
                     <ProjectCards
                         project="Team generator"
@@ -120,13 +142,14 @@ const Projects: GetStaticProps = () => {
                     >
                         <SiYarn className="mx-1" />
                         <FaSass className="mx-1" />
-                        <FaReact className="mx-1"/>
+                        <FaReact className="mx-1" />
                         <SiTypescript className="mx-1" />
                         <DiJqueryLogo className="mx-1" />
                         <SiTailwindcss className="mx-1" />
-                        <TbApi className="mx-1" />
                         <SiMongodb className="mx-1" />
                         <SiVite className="mx-1" />
+                        <SiExpress className="ml-1" />
+                        <TbApi className="mr-1" />
                     </ProjectCards>
                 </section>
             </Page>
