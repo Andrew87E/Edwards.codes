@@ -66,8 +66,8 @@
 
 ![My Portfolio Screen Shot](./public/img/KfIFDWD.png)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `andrew87e`, `next-portfolio`, `secret8squirrel`, `andrew87e`, `Andrew@Edwards.codes`, `email`, `project_title`, `project_description`
-
+This is my perosonal website and portfolio. It contains my projects and blog.
+ 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
