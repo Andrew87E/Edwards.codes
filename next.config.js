@@ -11,6 +11,8 @@ module.exports = {
       'avatars.githubusercontent.com/',
       'github.com',
       'imgur.com',
+      'camo.githubusercontent.com',
+      '*',
   ],
   },
 }

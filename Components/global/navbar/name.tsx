@@ -7,7 +7,7 @@ export const Name = () => {
         <div className="list-none font-bold text-lg">
         <Link href="/">
           <span className="text-xl flex items-center">
-            <figure className="cursor-pointer transform hover:scale-75 transition-transform duration-500 bg-transparent mt-4 p-1">
+            <figure className="cursor-pointer transform hover:scale-75 transition-transform duration-500 bg-transparent mt-4 p-1 animate-spin">
               <Image
                 src="/icons/portfolio-logo.svg"
                 width="80"
