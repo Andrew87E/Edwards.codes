@@ -31,23 +31,29 @@ export const ProjectCards = ({
                 className="ae-blog-card hover:scale-105 relative mb-20 flex-1 m-5 w-full"
             >
                 <div>
-                    <div className="shadow h-64 rounded-full relative w-full">
+                    <div className="h-64 relative w-full border rounded-3xl border-lime-600">
                         <Link href={`${deployUrl}`} className="href">
-                            <a>
+                            <a target="_blank" rel="noopener noreferrer">
                                 <Image
                                     src={img}
                                     alt="Github Link with Image"
                                     layout="fill"
                                     priority
                                     data-mdb-ripple="true"
+                                    className="rounded-3xl border"
                                 />
                             </a>
                         </Link>
                     </div>
                     <div className="p-6 w-11/12 mx-auto -mt-24 bg-gray-900 rounded-3xl z-20 relative mb-4 text-center">
-                        <Link href={`${github}`} className="hover:underline">
-                            <a className="uppercase text-sm text-lime-500 text-center pb-3 bg-transparent">
+                        <Link
+                            href={`${github}`}
+                            className="hover:underline w-full"
+                        >
+                            <a className="uppercase text-sm text-lime-500 text-center pb-3 bg-transparent inline-flex hover:underline hover:scale-95" target="_blank" rel="noopener noreferrer">
+                                <AiOutlineGithub className="justify-start h-5 w-4 mr-4" />
                                 {project}
+                                <AiOutlineGithub className="justify-start h-5 w-4 ml-4" />
                             </a>
                         </Link>
                         <p className="text-lg text-white text-center pb-3 h-20">
@@ -59,7 +65,7 @@ export const ProjectCards = ({
                                 return (
                                     <section
                                         key={index}
-                                        className="inline-flex hover:scale-90"
+                                        className="inline-flex"
                                     >
                                         {chirrens}
                                     </section>
