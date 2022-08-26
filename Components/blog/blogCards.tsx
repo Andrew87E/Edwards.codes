@@ -85,7 +85,7 @@ export const BlogCards: React.FC = () => {
         );
     } else {
         return (
-            <div className="pt-16 w-full h-full">
+            <div className="pt-16 w-full min-h-screen">
                 <div className="mb-10">
                     <h1 className="xl:text-5xl pt-4 xl:pt-0 text-3xl text-white text-center font-extrabold mb-4 ae-blog-title">
                         {"My Blog Posts".split("").map((letter, index) => {

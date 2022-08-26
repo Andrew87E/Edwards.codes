@@ -20,6 +20,28 @@
 //     text-shadow: 4px 4px 0 $light-green, 6px 6px 0 $dark-green;
 // }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    color: $dark-green;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(101 163 13);
+    border-radius: 9999px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 .ae-links {
     text-shadow: 4px 4px 0 $light-green;
 }
@@ -35,7 +57,7 @@
 }
 
 .ae-blog-quote {
-font-weight: 700;
+    font-weight: 700;
 }
 
 #ae-particles {
@@ -71,10 +93,9 @@ font-weight: 700;
     z-index: -10;
 }
 
-.ae-new-post-head{
+.ae-new-post-head {
     text-shadow: 3px 2px $dark-teal;
     font-family: "Space Grotesk", sans-serif;
-
 }
 
 // @media screen and (max-width: 768px) {

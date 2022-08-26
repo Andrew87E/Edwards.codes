@@ -19,9 +19,8 @@ const Home: GetStaticProps = () => {
                     desc: "I'm a passionate developer interested in coding in every language",
                 }}
             >
-                <Container />
-                <section className="inline-flex bg-transparent drop-shadow-md min-h-min mr-1 overflow-hidden min-w-min">
-                    <article className="text-white">
+                <section className="inline-flex bg-transparent drop-shadow-md min-h-min mr-1 overflow-hidden min-w-min h-screen">
+                    <article className="text-white self-center">
                         <BetterLetters
                             words="Andrew"
                             custom="text-8xl ae-letters"
@@ -38,7 +37,6 @@ const Home: GetStaticProps = () => {
                         />
                     </article>
                 </section>
-                <Hero />
             </Page>
         </>
     );

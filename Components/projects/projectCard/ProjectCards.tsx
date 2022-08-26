@@ -28,10 +28,10 @@ export const ProjectCards = ({
         <section className="w-10/12 md:w-96 m-5">
             <div
                 key={project}
-                className="ae-blog-card hover:scale-105 relative mb-20 flex-1 m-5 w-full"
+                className="ae-blog-card relative mb-20 flex-1 m-5 w-full"
             >
                 <div>
-                    <div className="h-64 relative w-full border rounded-3xl border-lime-600">
+                    <div className="h-64 relative w-full  rounded-3xl ">
                         <Link href={`${deployUrl}`} className="href">
                             <a target="_blank" rel="noopener noreferrer">
                                 <Image
@@ -40,7 +40,7 @@ export const ProjectCards = ({
                                     layout="fill"
                                     priority
                                     data-mdb-ripple="true"
-                                    className="rounded-3xl border"
+                                    className="rounded-3xl hover:scale-95"
                                 />
                             </a>
                         </Link>
