@@ -9,7 +9,7 @@ import { GetStaticProps } from "next";
 import { TbApi, TbBrandJavascript, TbBrandBootstrap } from "react-icons/tb";
 import { FcGoogle } from "react-icons/fc";
 import { TiWeatherPartlySunny } from "react-icons/ti";
-import { FaReact, FaSass, FaGithub, FaHtml5, FaCss3Alt } from "react-icons/fa";
+import { FaReact, FaSass, FaGithub, FaHtml5, FaCss3Alt, FaMarkdown } from "react-icons/fa";
 import {
     SiJavascript,
     SiTypescript,
@@ -22,6 +22,8 @@ import {
     SiVercel,
     SiNextdotjs,
     SiBulma,
+    SiAuth0,
+    
 } from "react-icons/si";
 import { DiJqueryLogo } from "react-icons/di";
 
@@ -99,6 +101,7 @@ const Projects: GetStaticProps = () => {
                         <FaCss3Alt className="mx-1" />
                         <TbBrandJavascript className="mx-1" />
                         <SiNodedotjs className="mx-1" />
+                        <FaMarkdown className="mx-1" />
                     </ProjectCards>
                     <ProjectCards
                         project="Weather App"
@@ -150,6 +153,25 @@ const Projects: GetStaticProps = () => {
                         <SiVite className="mx-1" />
                         <SiExpress className="ml-1" />
                         <TbApi className="mr-1" />
+                    </ProjectCards>
+                    <ProjectCards
+                        project="My portfolio"
+                        desc="This is my personal website/Portfolio It uses Nextjs and Mongodb"
+                        deployUrl="https://www.edwards.codes/"
+                        alt="Deployed Link"
+                        img="https://github.com/Andrew87E/Edwards.codes/raw/main/public/img/KfIFDWD.png"
+                        github="https://github.com/Andrew87E/Edwards.codes"
+                    >
+                        <SiNextdotjs className="mx-1" />
+                        <FaReact className="mx-1" />
+                        <SiTypescript className="mx-1" />
+                        <FaSass className="mx-1" />
+                        <DiJqueryLogo className="mx-1" />
+                        <SiTailwindcss className="mx-1" />
+                        <SiMongodb className="mx-1" />
+                        <SiAuth0 className="mx-1" />
+                        <SiVercel className="mx-1" />
+                        <TbApi className="mx-1" />
                     </ProjectCards>
                 </section>
             </Page>

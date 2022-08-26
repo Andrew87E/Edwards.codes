@@ -1,5 +1,5 @@
-import Blog from "../../../../models/blogPosts";
 import connectMongo from "../../../../utils/connectMongo";
+import Blog from "../../../../models/blogPosts";
 
 /**
  * @param {import('next').NextApiRequest} req
@@ -12,12 +12,30 @@ export default async function addComment(req, res) {
         console.log("CONNECTED");
         const newComment = req.body;
         const getId = req.query.addComment;
-        console.log(req.query.addComment);
-        let update = { newComment };
+        console.log(getId);
 
-        
-        res.status(200).json(blog);
+        // await Blog.updateOne(getId, { comments: update });
+
+        console.log("made it here");
+        // doc.comments = update;
+        // await doc.save();
+
+        // create a comment
+        // get the id of that comment
+        // relate that id to the post
+
+        const blog = await Blog.findByIdAndUpdate(
+            { _id: getId },
+            { $push: { comments: newComment } },
+            { new: true },
+        ).exec();
+
+        console.log("blog", blog);
+        // const blog = await Blog.find({ _id: getId }).exec();
+
+        return res.status(200).json(blog);
     } catch (err) {
-        (err) => res.status(500).json(err);
+        console.error(err.message);
+        return (err) => res.status(500).json(err);
     }
 }

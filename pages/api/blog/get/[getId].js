@@ -19,6 +19,7 @@ export default async function getBlog(req, res) {
         console.log("GETTING DOCUMENT");
         
         const blog = await Blog.find({ _id: getId }).exec();
+        console.log("HIT")
         res.status(200).json(blog);
         
         console.log("GOT DOCUMENT!");
