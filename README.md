@@ -23,7 +23,7 @@
     <br />
     <br />
     <br />
-    <a href="edwards.codes">View Demo</a>
+    <a href="https://www.edwards.codes">View Demo</a>
     ·
     <a href="https://github.com/andrew87e/next-portfolio/issues">Report Bug</a>
     ·
