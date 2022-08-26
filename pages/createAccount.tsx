@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { Footer, Navbar, Jumbotron, Hero, Intro, FavProjects, ParticlesContainer, Page } from "../Components";
+import { ParticlesContainer, Page } from "../Components";
 
 
 const createAccount: GetStaticProps = () => {

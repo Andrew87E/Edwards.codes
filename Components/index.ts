@@ -1,4 +1,4 @@
-export { Jumbotron } from "./global/jumbotron/jumbotron";
+export { Container } from "./global/jumbotron/container";
 export { Hero } from "./hero/hero";
 export { Footer } from "./global/footer/footer";
 export { Navbar } from "./global/navbar/navbar";
@@ -12,7 +12,7 @@ export { Snow } from "./particles/snow";
 export { MobileMenu } from "./global/navbar/mobileMenu";
 export { Page } from "./util/Page";
 export { NewPost } from "./blog/newPost";
-export { WordCloud } from "./tagCloud/tagCloud";
+export { Skills } from "./skills/skills";
 export { Comments } from "./blog/comments";
 
 

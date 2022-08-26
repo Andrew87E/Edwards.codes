@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { Footer, Navbar, Jumbotron, Hero, Intro, FavProjects, ParticlesContainer, Page } from "../Components";
+import { Footer, Navbar, Container, Hero, Intro, FavProjects, ParticlesContainer, Page } from "../Components";
 
 
 const Home: GetStaticProps = () => {
@@ -10,7 +10,7 @@ const Home: GetStaticProps = () => {
       <ParticlesContainer />
       <Page currentPage="Home" 
       meta={{ desc: "I'm a passionate developer interested in coding in every language" }}>
-      <Jumbotron />
+      <Container />
       <Intro />
       <Hero />
       </Page>

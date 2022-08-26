@@ -1,4 +1,4 @@
-import { Jumbotron, Page } from "../Components";
+import { Container, Page } from "../Components";
 import React from "react";
 import { GetStaticProps } from "next";
 
@@ -9,7 +9,7 @@ const About: GetStaticProps = () => {
             currentPage="About Me"
             meta={{ desc: "Some info about myself!" }}
             >
-            <Jumbotron />
+            <Container />
             </Page>
 
         </>

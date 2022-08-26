@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { BlogCards, Snow, Page, NewPost, Jumbotron } from "../../../Components";
+import { BlogCards, Snow, Page, NewPost } from "../../../Components";
 
 
 const Blog: GetStaticProps = () => {

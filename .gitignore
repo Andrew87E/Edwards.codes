@@ -136,3 +136,8 @@ node_modules
 !.env.example
 
 .examples/*
+
+.eslintrc.json
+.editorconfig
+.prettierignore
+.prettierrc

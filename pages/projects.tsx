@@ -1,5 +1,5 @@
 import {
-    Jumbotron,
+    Container,
     ProjectCards,
     Page,
     ParticlesContainer,

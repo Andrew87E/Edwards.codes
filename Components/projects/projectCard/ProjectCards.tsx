@@ -50,7 +50,11 @@ export const ProjectCards = ({
                             href={`${github}`}
                             className="hover:underline w-full"
                         >
-                            <a className="uppercase text-sm text-lime-500 text-center pb-3 bg-transparent inline-flex hover:underline hover:scale-95" target="_blank" rel="noopener noreferrer">
+                            <a
+                                className="uppercase text-sm text-lime-500 text-center pb-3 bg-transparent inline-flex hover:underline hover:scale-95"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
                                 <AiOutlineGithub className="justify-start h-5 w-4 mr-4" />
                                 {project}
                                 <AiOutlineGithub className="justify-start h-5 w-4 ml-4" />
