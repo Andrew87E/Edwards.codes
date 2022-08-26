@@ -14,11 +14,4 @@ export { Page } from "./util/Page";
 export { NewPost } from "./blog/newPost";
 export { Skills } from "./skills/skills";
 export { Comments } from "./blog/comments";
-
-
-
-
-
-
-
-
+export { Hover } from "./skills/Hover";

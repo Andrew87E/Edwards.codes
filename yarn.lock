@@ -4771,6 +4771,7 @@ __metadata:
     react-markdown: ^8.0.3
     react-particles: ^2.2.0
     react-tagcloud: ^2.3.0
+    react-tooltip: ^4.2.21
     react-tsparticles: ^2.2.0
     remark-gfm: ^3.0.1
     sass: ^1.54.3
@@ -4925,7 +4926,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.0.0, prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.0.0, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -5085,6 +5086,19 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0"
   checksum: 8ab9c5a7be2a8b0b0a762452bcec47799618eb01b2a5ac544f03492e9021757e4e5ed88db65135da027334027258e5ddaf631ddab18dadd865ec519eb3e1e709
+  languageName: node
+  linkType: hard
+
+"react-tooltip@npm:^4.2.21":
+  version: 4.2.21
+  resolution: "react-tooltip@npm:4.2.21"
+  dependencies:
+    prop-types: ^15.7.2
+    uuid: ^7.0.3
+  peerDependencies:
+    react: ">=16.0.0"
+    react-dom: ">=16.0.0"
+  checksum: dd145ae90768a8af5518672bfd91b985a57ff021b50a60044caedd872b457ea5134793cf8d5426bd45587fa6f722320936009f5c6533a4f94d665c0a23589222
   languageName: node
   linkType: hard
 
@@ -6531,6 +6545,15 @@ __metadata:
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 474acf1146cb2701fe3b074892217553dfcf9a031280919ba1b8d651a068c9b15d863b7303cb15bd00a862b498e6cf4ad7b4a08fb134edd5a6f7641681cb54a2
+  languageName: node
+  linkType: hard
+
+"uuid@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "uuid@npm:7.0.3"
+  bin:
+    uuid: dist/bin/uuid
+  checksum: f5b7b5cc28accac68d5c083fd51cca64896639ebd4cca88c6cfb363801aaa83aa439c86dfc8446ea250a7a98d17afd2ad9e88d9d4958c79a412eccb93bae29de
   languageName: node
   linkType: hard
 
