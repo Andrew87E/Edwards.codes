@@ -9,7 +9,14 @@ import { GetStaticProps } from "next";
 import { TbApi, TbBrandJavascript, TbBrandBootstrap } from "react-icons/tb";
 import { FcGoogle } from "react-icons/fc";
 import { TiWeatherPartlySunny } from "react-icons/ti";
-import { FaReact, FaSass, FaGithub, FaHtml5, FaCss3Alt, FaMarkdown } from "react-icons/fa";
+import {
+    FaReact,
+    FaSass,
+    FaGithub,
+    FaHtml5,
+    FaCss3Alt,
+    FaMarkdown,
+} from "react-icons/fa";
 import {
     SiJavascript,
     SiTypescript,
@@ -23,7 +30,6 @@ import {
     SiNextdotjs,
     SiBulma,
     SiAuth0,
-    
 } from "react-icons/si";
 import { DiJqueryLogo } from "react-icons/di";
 
