@@ -2,6 +2,8 @@ import ReactTooltip from "react-tooltip";
 import React from "react";
 
 export const Hover = (props: {
+    backgroundColor: string;
+    textColor: string;
     id: string;
     name:
         | string
@@ -12,7 +14,13 @@ export const Hover = (props: {
         | React.ReactPortal;
 }) => {
     return (
-        <ReactTooltip id={props.id} type="success">
+        <ReactTooltip
+            id={props.id}
+            type="success"
+            textColor={props.textColor}
+            backgroundColor={props.backgroundColor}
+            className="text-lg"
+        >
             <span>{props.name}</span>
         </ReactTooltip>
     );
