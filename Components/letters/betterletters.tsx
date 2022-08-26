@@ -12,7 +12,7 @@ export const BetterLetters = (props: Props) => {
                 return (
                     <span
                         key={index}
-                        className={`cursor-default transition-all duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white ${props.custom}`}
+                        className={`${props.custom} cursor-default transition-all duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white`}
                     >
                         {letter}
                     </span>
