@@ -66,15 +66,17 @@ export const BlogCards: React.FC = () => {
 
     if (isLoading) {
         return (
-            <div id="load" className="h-screen">
-                <div>G</div>
-                <div>N</div>
-                <div>I</div>
-                <div>D</div>
-                <div>A</div>
-                <div>O</div>
-                <div>L</div>
-            </div>
+            <section className="h-screen w-full relative">
+                <div id="load" className="h-screen min-h-screen">
+                    <div className="h-screen text-5xl">G</div>
+                    <div className="h-screen text-5xl">N</div>
+                    <div className="h-screen text-5xl">I</div>
+                    <div className="h-screen text-5xl">D</div>
+                    <div className="h-screen text-5xl">A</div>
+                    <div className="h-screen text-5xl">O</div>
+                    <div className="h-screen text-5xl">L</div>
+                </div>
+            </section>
         );
     } else {
         return (
