@@ -1,9 +1,7 @@
 import { Hover } from "./Hover";
 import { DiJqueryLogo } from "react-icons/di";
-import ReactTooltip from "react-tooltip";
-import { TbApi, TbBrandJavascript, TbBrandBootstrap } from "react-icons/tb";
+import { TbApi, TbBrandBootstrap } from "react-icons/tb";
 import { FcGoogle, FcLinux } from "react-icons/fc";
-import { TiWeatherPartlySunny } from "react-icons/ti";
 import {
     FaReact,
     FaSass,
@@ -36,7 +34,6 @@ import {
     SiStorybook,
     SiHeroku,
 } from "react-icons/si";
-import { BetterLetters } from "../letters/betterletters";
 
 export const Skills: React.FC = () => {
     return (

@@ -4,9 +4,7 @@ import Link from "next/link";
 import axios from "axios";
 import type { BlogType } from "../../types/blog";
 import moment from "moment";
-import { Container } from "../index";
 import { useUser } from "@auth0/nextjs-auth0";
-import Router from "next/router";
 
 export const BlogCards: React.FC = () => {
     const [blogPost, setBlogPost] = useState([]);
@@ -68,7 +66,7 @@ export const BlogCards: React.FC = () => {
 
     if (isLoading) {
         return (
-            <div id="load">
+            <div id="load" className="h-screen">
                 <div>G</div>
                 <div>N</div>
                 <div>I</div>
@@ -76,11 +74,6 @@ export const BlogCards: React.FC = () => {
                 <div>A</div>
                 <div>O</div>
                 <div>L</div>
-                <Container />
-                <Container />
-                <Container />
-                <Container />
-                <Container />
             </div>
         );
     } else {

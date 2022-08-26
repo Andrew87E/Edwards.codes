@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useUser } from "@auth0/nextjs-auth0";
 
 export const NewPost: React.FC = () => {
-    const { user, error, isLoading } = useUser();
+    const { user } = useUser();
     const [showModal, setShowModal] = useState(false);
 console.log(user)
     const handleModal = () => {
