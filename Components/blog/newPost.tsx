@@ -5,6 +5,7 @@ import $ from "jquery";
 import DOMPurify from "dompurify";
 import { marked } from "marked";
 import Router from "next/router";
+import { BetterLetters } from "../letters/betterletters";
 
 export const NewPost: React.FC = () => {
     const { user, error, isLoading } = useUser();
@@ -47,34 +48,20 @@ export const NewPost: React.FC = () => {
                 <div className="relative rounded-3xl bg-black border border-lime-500">
                     <div className="py-6 px-6 lg:px-8">
                         <h3 className="mb-10 text-center font-medium text-white dark:text-white">
-                            {"Make a new post"
-                                .split("")
-                                .map((letter, index) => {
-                                    return (
-                                        <span
-                                            key={index}
-                                            className="cursor-default transition-all duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white md:text-6xl text-3xl ae-new-post-head"
-                                        >
-                                            {letter}
-                                        </span>
-                                    );
-                                })}
+                            <BetterLetters
+                                words="Make a New Post!"
+                                custom="ae-new-post-head md:text-6xl text-3xl"
+                            />
                         </h3>
                         <form className="space-y-6" action="#">
                             <label
                                 htmlFor="Author"
                                 className="inline-block text-sm font-medium text-gray-200 "
                             >
-                                {"Author".split("").map((letter, index) => {
-                                    return (
-                                        <span
-                                            key={index}
-                                            className="cursor-default transition-all duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white text-lg"
-                                        >
-                                            {letter}
-                                        </span>
-                                    );
-                                })}
+                                <BetterLetters
+                                    words="Author"
+                                    custom="text-lg"
+                                />
                             </label>
                             <input
                                 type="text"
@@ -89,16 +76,7 @@ export const NewPost: React.FC = () => {
                                 htmlFor="image link"
                                 className="inline-block text-sm font-medium text-gray-200"
                             >
-                                {"Title".split("").map((letter, index) => {
-                                    return (
-                                        <span
-                                            key={index}
-                                            className="cursor-default transition-all duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white text-lg"
-                                        >
-                                            {letter}
-                                        </span>
-                                    );
-                                })}
+                                <BetterLetters words="Title" custom="text-lg" />
                             </label>
                             <input
                                 type="text"
@@ -115,18 +93,10 @@ export const NewPost: React.FC = () => {
                                         className="inline-block mb-2 text-sm font-medium text-gray-200 "
                                         htmlFor="summary"
                                     >
-                                        {"Summary (Appears on the Card) Max Length 78"
-                                            .split("")
-                                            .map((letter, index) => {
-                                                return (
-                                                    <span
-                                                        key={index}
-                                                        className="indent-7 cursor-default transition-all duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white text-lg"
-                                                    >
-                                                        {letter}
-                                                    </span>
-                                                );
-                                            })}
+                                        <BetterLetters
+                                            words="Summary (Appears on the Card) Max Length 78"
+                                            custom="text-lg"
+                                        />
                                     </label>
                                     <textarea
                                         name="summary"
@@ -142,18 +112,10 @@ export const NewPost: React.FC = () => {
                                         className="inline-block mb-2 text-sm font-medium text-gray-200 "
                                         htmlFor="image"
                                     >
-                                        {"Image Link (Appears on the Card) Must be from Imgur"
-                                            .split("")
-                                            .map((letter, index) => {
-                                                return (
-                                                    <span
-                                                        key={index}
-                                                        className="indent-7 cursor-default transition-all duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white text-lg"
-                                                    >
-                                                        {letter}
-                                                    </span>
-                                                );
-                                            })}
+                                        <BetterLetters
+                                            words="Image Link (Appears on the Card) Must be from Imgur"
+                                            custom="text-lg"
+                                        />
                                     </label>
                                     <input
                                         type="text"
@@ -170,18 +132,10 @@ export const NewPost: React.FC = () => {
                                     htmlFor="body"
                                     className="block mb-2 text-sm font-medium text-gray-200"
                                 >
-                                    {"Body (Markdown)"
-                                        .split("")
-                                        .map((letter, index) => {
-                                            return (
-                                                <span
-                                                    key={index}
-                                                    className="indent-7 cursor-default transition-all duration-700 hover:duration-100 hover:scale-125 hover:text-lime-500 text-white text-lg"
-                                                >
-                                                    {letter}
-                                                </span>
-                                            );
-                                        })}
+                                    <BetterLetters
+                                        words="Body (Markdown)"
+                                        custom="text-lg"
+                                    />
                                 </label>
                                 <textarea
                                     name="body"

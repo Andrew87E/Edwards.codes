@@ -1,4 +1,4 @@
-import { Container, Page } from "../Components";
+import { Contact, Container, Page } from "../Components";
 import React from "react";
 import { GetStaticProps } from "next";
 
@@ -7,9 +7,9 @@ const About: GetStaticProps = () => {
         <>
             <Page
             currentPage="About Me"
-            meta={{ desc: "Some info about myself!" }}
+            meta={{ desc: "Drop me a line!" }}
             >
-            <Container />
+            <Contact />
             </Page>
 
         </>
