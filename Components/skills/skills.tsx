@@ -125,7 +125,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="sass"
-                name="sass"
+                name="Sass"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -140,7 +140,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="tailwind"
-                name="tailwind"
+                name="Tailwind"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -155,7 +155,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="bulma"
-                name="bulma"
+                name="Bulma"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -170,7 +170,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="npm"
-                name="npm"
+                name="NPM"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -200,7 +200,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="express"
-                name="express"
+                name="Express"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -215,7 +215,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="node"
-                name="node"
+                name="Node js"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -230,7 +230,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="api"
-                name="api"
+                name="Custom & Third Party APIs"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -245,7 +245,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="react"
-                name="react"
+                name="React"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -260,7 +260,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="redux"
-                name="redux"
+                name="Redux"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -275,7 +275,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="next"
-                name="next"
+                name="Next js"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -290,7 +290,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="vite"
-                name="vite"
+                name="Vite"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -305,7 +305,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="auth0"
-                name="auth0"
+                name="Auth0"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -320,7 +320,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="mongo"
-                name="mongo"
+                name="MongoDB"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -329,7 +329,7 @@ export const Skills: React.FC = () => {
                 color={"#4479A1"}
                 className="mx-2 my-2 hover:scale-105"
                 size={"10em"}
-                id="mysql"
+                id="MySQl"
                 data-tip
                 data-for="mysql"
             />
@@ -349,7 +349,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="github"
-                name="github"
+                name="GitHub"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -364,7 +364,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="bootstrap"
-                name="bootstrap"
+                name="Boot Strap"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -379,7 +379,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="docker"
-                name="docker"
+                name="Docker"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -394,7 +394,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="markdown"
-                name="markdown"
+                name="Markdown"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -409,7 +409,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="jest"
-                name="jest"
+                name="Jest"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -424,7 +424,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="storybook"
-                name="storybook"
+                name="Storybook"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -453,7 +453,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="linux"
-                name="linux"
+                name="Linux"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -468,7 +468,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="handlebars"
-                name="handlebars"
+                name="Handlebars"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -483,7 +483,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="vercel"
-                name="vercel"
+                name="Vercel"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -498,7 +498,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="firebase"
-                name="firebase"
+                name="Firebase"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -512,7 +512,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="google"
-                name="google"
+                name="Google services"
                 textColor="black"
                 backgroundColor="#3EB143"
             />
@@ -527,7 +527,7 @@ export const Skills: React.FC = () => {
             />
             <Hover
                 id="heroku"
-                name="heroku"
+                name="Heroku"
                 textColor="black"
                 backgroundColor="#3EB143"
             />

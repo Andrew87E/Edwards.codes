@@ -6,12 +6,13 @@ import {
     ParticlesContainer,
     Page,
     BetterLetters,
+    Parallax,
 } from "../Components";
 
 const Home: GetStaticProps = () => {
     return (
         <>
-            <ParticlesContainer />
+            <Parallax />
             <Page
                 currentPage="Home"
                 meta={{

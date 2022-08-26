@@ -15,3 +15,4 @@ export { Comments } from "./blog/comments";
 export { Hover } from "./skills/Hover";
 export { Contact } from "./contact/contact";
 export { BetterLetters } from "./letters/betterletters";
+export { Parallax } from "./particles/parallax";
