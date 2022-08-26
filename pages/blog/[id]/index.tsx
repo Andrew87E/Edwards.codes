@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import { Comments, Jumbotron, Page } from "../../../Components";
+import { Comments, Container, Page } from "../../../Components";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { BlogType } from "../../../types/blog";
@@ -54,7 +54,7 @@ export const BlogPost: GetStaticProps = () => {
                             <Comments comments={blog.comments} />
                         </section>
                     </section>
-                    <Jumbotron />
+                    <Container />
                 </>
             );
         });
