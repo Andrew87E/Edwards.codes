@@ -9,7 +9,6 @@ const commentSchema = new Schema({
     user: String,
 });
 
-
 const Comment = mongoose.models.Comment || model("Comment", commentSchema);
 
 export default Comment;
