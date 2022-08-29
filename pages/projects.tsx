@@ -46,7 +46,7 @@ const Projects: GetStaticProps = () => {
                 <Header
                     custom="mb-6 text-white ae-title-letters"
                     title={
-                        <BetterLetters words="My Skills" custom="text-9xl" />
+                        <BetterLetters words="My Projects" custom="text-9xl" />
                     }
                 />
 
