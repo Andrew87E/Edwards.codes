@@ -1,5 +1,5 @@
-import connectMongo from "../../../utils/connectMongo";
-import Blog from "../../../models/blogPosts";
+import connectMongo from "../../utils/connectMongo";
+import Blog from "../../models/blogPosts";
 
 /**
  * @param {import('next').NextApiRequest} req
