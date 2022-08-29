@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
                     <a
                         href="mailto: Andrew@Edwards.codes"
                         type="button"
-                        className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+                        className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 justify-center"
                         rel="noopener noreferrer"
                         target="_blank"
                         id="email"
@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
                     <a
                         href="https://drive.google.com/file/d/1KDNsl_mDoWQWa548MLfAKpN2ikbqBwj7/view?usp=sharing/"
                         type="button"
-                        className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+                        className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 justify-center"
                         rel="noopener noreferrer"
                         target="_blank"
                         id="resume"
@@ -68,7 +68,7 @@ export const Footer: React.FC = () => {
                     <a
                         href="https://www.linkedin.com/in/andrew-edwards-34a927a5/"
                         type="button"
-                        className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+                        className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 justify-center"
                         rel="noopener noreferrer"
                         target="_blank"
                         id="linkedin"
@@ -92,7 +92,7 @@ export const Footer: React.FC = () => {
                     <a
                         href="https://github.com/andrew87e"
                         type="button"
-                        className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+                        className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 justify-center"
                         rel="noopener noreferrer"
                         target="_blank"
                         id="github"
