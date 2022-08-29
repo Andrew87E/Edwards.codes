@@ -22,6 +22,7 @@ export const Footer: React.FC = () => {
                         type="button"
                         className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
                         rel="noopener noreferrer"
+                        target="_blank"
                         id="email"
                         data-tip
                         data-for="email"
@@ -45,6 +46,7 @@ export const Footer: React.FC = () => {
                         type="button"
                         className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
                         rel="noopener noreferrer"
+                        target="_blank"
                         id="resume"
                         data-tip
                         data-for="resume"
@@ -68,6 +70,7 @@ export const Footer: React.FC = () => {
                         type="button"
                         className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
                         rel="noopener noreferrer"
+                        target="_blank"
                         id="linkedin"
                         data-tip
                         data-for="linkedin"
@@ -90,6 +93,8 @@ export const Footer: React.FC = () => {
                         href="https://github.com/andrew87e"
                         type="button"
                         className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+                        rel="noopener noreferrer"
+                        target="_blank"
                         id="github"
                         data-tip
                         data-for="github"
