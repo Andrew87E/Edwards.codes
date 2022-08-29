@@ -1,13 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import {
-    Container,
-    Hero,
-    ParticlesContainer,
-    Page,
-    BetterLetters,
-    Parallax,
-} from "../Components";
+import { Page, BetterLetters, Parallax } from "../Components";
 
 const Home: GetStaticProps = () => {
     return (
