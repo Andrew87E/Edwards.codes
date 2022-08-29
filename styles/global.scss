@@ -45,12 +45,16 @@
     background: $light-green;
 }
 
+.ae-b-green {
+    border-color: $logo-green;
+}
+
 .ae-links {
     text-shadow: 4px 4px 0 $light-green;
 }
 
 .ae-letters {
-    text-shadow: 4px 4px 0 $med-green;
+    text-shadow: 2px 2px 0 $logo-green, 0 -2px 0 $logo-green;
     font-family: "Space Grotesk", sans-serif;
 }
 
@@ -106,8 +110,33 @@
 .ae-text-outline-small {
     text-shadow: -1px 0 $light-green, 0 -1px $light-green, 1px 0 $light-green,
         0 1px $light-green;
-    font-family: "Space Grotesk", sans-serif;
     cursor: default;
+}
+
+.ae-name {
+    text-shadow: -0.5px 0 $light-green, 0 -0.5px $light-green,
+        0.5px 0 $light-green, 0 0.5px $light-green;
+    font-size: 38px;
+}
+
+.ae-space {
+    font-family: "Space Grotesk", sans-serif;
+}
+
+.ae-lust {
+    font-family: "Lustria", serif;
+}
+
+.ae-pop {
+    font-family: "Poppins", sans-serif;
+}
+
+.ae-ranch {
+    font-family: "Rancho", cursive;
+}
+
+.ae-robot {
+    font-family: "Roboto Mono", monospace;
 }
 
 .ae-text-outline-small-dark {

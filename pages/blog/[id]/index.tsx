@@ -18,7 +18,6 @@ export const BlogPost: GetStaticProps = () => {
         axios.get(`/api/blog/get/${pageId}`).then((res) => {
             const response = res.data;
             setBlogPost(response);
-            console.log(response);
         });
     }, [pageId]);
 
@@ -26,8 +25,8 @@ export const BlogPost: GetStaticProps = () => {
         return Array.from(blogPost).map((blog: BlogType) => {
             const postDate = moment(blog.postDate).format("MM-DD-YYYY");
             return (
-                <>
-                    <section key={blog._id} className="min-h-screen m-5">
+                <div key={blog._id}>
+                    <section className="min-h-screen m-5">
                         <article className="w-full text-white flex text-center">
                             <h1 className="w-full font-serif text-6xl">
                                 {blog.title}
@@ -41,7 +40,7 @@ export const BlogPost: GetStaticProps = () => {
                                             dangerouslySetInnerHTML={{
                                                 __html: blog.body,
                                             }}
-                                        />
+                                        ></div>
                                     }
                                 </div>
                             </div>
@@ -55,25 +54,22 @@ export const BlogPost: GetStaticProps = () => {
                         </section>
                     </section>
                     <Container />
-                </>
+                </div>
             );
         });
     };
 
     const handleDelete = () => {
-        axios.delete(`/api/blog/delete/${pageId}`).then((res) => {
-            console.log(res);
-            console.log(`POST ${pageId} DELETED`);
-        });
+        axios.delete(`/api/blog/delete/${pageId}`).then((res) => {});
         location.replace("/blog");
     };
 
     return (
         <>
             <Page currentPage="Blog" meta={{ desc: "My blog post!" }}>
-                <article className="w-full h-full text-white mt-36 p-4">
+                <section className="w-full h-full text-white mt-36 p-4">
                     {renderPost()}
-                </article>
+                </section>
                 {user?.email === blogPost[0]?.userEmail ||
                 user?.email === "andrew@edwards.codes" ? (
                     <button

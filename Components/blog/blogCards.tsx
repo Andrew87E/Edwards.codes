@@ -14,7 +14,6 @@ export const BlogCards: React.FC = () => {
     useEffect(() => {
         axios.get("api/blog/getAll").then((res) => {
             setBlogPost(res.data);
-            console.info(res.data);
             setLoading(false);
         });
     }, []);

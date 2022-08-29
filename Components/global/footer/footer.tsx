@@ -1,11 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { GoMailRead } from "react-icons/go";
 import { AiOutlineFilePdf, AiFillGithub } from "react-icons/ai";
 import { BsLinkedin } from "react-icons/bs";
+import { Hover } from "../../skills/Hover";
 
 export const Footer: React.FC = () => {
+    const [isMounted, setIsMounted] = useState(false);
+
+    useEffect(() => {
+        setIsMounted(true);
+    }, []);
+
     return (
         <footer className="text-center bg-transparent text-white left-0 bottom-0 right-0 relative bg-transparent">
             <div className="justify-center px-6 pt-6">
@@ -15,47 +22,91 @@ export const Footer: React.FC = () => {
                         type="button"
                         className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
                         rel="noopener noreferrer"
+                        id="email"
+                        data-tip
+                        data-for="email"
                     >
                         <GoMailRead
-                            className="w-3 h-full mx-auto ae-links"
+                            className="w-4 h-full mx-auto ae-links"
                             color="lime"
                         />
                     </a>
+                    {isMounted && (
+                        <Hover
+                            backgroundColor="#3EB143"
+                            textColor="black"
+                            id="email"
+                            name="Send an Email"
+                        />
+                    )}
 
                     <a
                         href="https://drive.google.com/file/d/1KDNsl_mDoWQWa548MLfAKpN2ikbqBwj7/view?usp=sharing/"
                         type="button"
                         className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
                         rel="noopener noreferrer"
+                        id="resume"
+                        data-tip
+                        data-for="resume"
                     >
                         <AiOutlineFilePdf
-                            className="w-3 h-full mx-auto ae-links"
+                            className="w-4 h-full mx-auto ae-links"
                             color="lime"
                         />
                     </a>
+                    {isMounted && (
+                        <Hover
+                            backgroundColor="#3EB143"
+                            textColor="black"
+                            id="resume"
+                            name="Resume"
+                        />
+                    )}
 
                     <a
                         href="https://www.linkedin.com/in/andrew-edwards-34a927a5/"
                         type="button"
                         className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
                         rel="noopener noreferrer"
+                        id="linkedin"
+                        data-tip
+                        data-for="linkedin"
                     >
                         <BsLinkedin
-                            className="w-3 h-full mx-auto ae-links"
+                            className="w-4 h-full mx-auto ae-links"
                             color="lime"
                         />
                     </a>
+                    {isMounted && (
+                        <Hover
+                            backgroundColor="#3EB143"
+                            textColor="black"
+                            id="linkedin"
+                            name="LinkedIn"
+                        />
+                    )}
 
                     <a
                         href="https://github.com/andrew87e"
                         type="button"
                         className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1"
+                        id="github"
+                        data-tip
+                        data-for="github"
                     >
                         <AiFillGithub
-                            className="w-3 h-full mx-auto ae-links"
+                            className="w-4 h-full mx-auto ae-links"
                             color="lime"
                         />
                     </a>
+                    {isMounted && (
+                        <Hover
+                            backgroundColor="#3EB143"
+                            textColor="black"
+                            id="github"
+                            name="GitHub"
+                        />
+                    )}
                 </div>
             </div>
 

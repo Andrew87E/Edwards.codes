@@ -1,4 +1,4 @@
-import { BetterLetters, Page, ParticlesContainer, Snow } from "../Components";
+import { BetterLetters, Page, Links } from "../Components";
 import React, { useState } from "react";
 import { GetStaticProps } from "next";
 
@@ -18,6 +18,7 @@ const ContactMe: GetStaticProps = () => {
 
     return (
         <>
+            <Links />
             <Page currentPage="Contact" meta={{ desc: "Drop me a line!" }}>
                 <div className="flex block flex-wrap h-screen">
                     <article className="mt-20 w-full justify-center text-center">
