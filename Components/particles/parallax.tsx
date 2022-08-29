@@ -341,12 +341,12 @@ export const Parallax: React.FC = () => {
                     },
                     size: {
                         random: {
-                            enable: true,
+                            enable: false,
                             minimumValue: 1,
                         },
                         value: {
-                            min: 0.1,
-                            max: 10,
+                            min: 1,
+                            max: 6,
                         },
                         animation: {
                             count: 0,

@@ -5,7 +5,7 @@ export { Navbar } from "./global/navbar/navbar";
 export { ProjectCards } from "./projects/projectCard/ProjectCards";
 export { FavProjects } from "./favProjects/favProjects";
 export { BlogCards } from "./blog/blogCards";
-export { ParticlesContainer } from "./particles/links";
+export { Links } from "./particles/links";
 export { Snow } from "./particles/snow";
 export { MobileMenu } from "./global/navbar/mobileMenu";
 export { Page } from "./util/Page";
@@ -13,7 +13,6 @@ export { NewPost } from "./blog/newPost";
 export { Skills } from "./skills/skills";
 export { Comments } from "./blog/comments";
 export { Hover } from "./skills/Hover";
-export { Contact } from "./contact/contact";
 export { BetterLetters } from "./letters/betterletters";
 export { Parallax } from "./particles/parallax";
-export { Header } from './global/header/Header'
+export { Header } from "./global/header/Header";

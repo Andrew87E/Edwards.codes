@@ -2,7 +2,9 @@ import {
     Container,
     ProjectCards,
     Page,
-    ParticlesContainer,
+    Links,
+    Header,
+    BetterLetters,
 } from "../Components";
 import React from "react";
 import { GetStaticProps } from "next";
@@ -36,11 +38,18 @@ import { DiJqueryLogo } from "react-icons/di";
 const Projects: GetStaticProps = () => {
     return (
         <>
-            <ParticlesContainer />
+            <Links />
             <Page
                 currentPage="Projects"
                 meta={{ desc: "Check out my work so far!" }}
             >
+                <Header
+                    custom="mb-6 text-white ae-title-letters"
+                    title={
+                        <BetterLetters words="My Skills" custom="text-9xl" />
+                    }
+                />
+
                 <section className="flex inline-flex flex-wrap mt-28 w-full justify-center">
                     <ProjectCards
                         project="Password Generator"

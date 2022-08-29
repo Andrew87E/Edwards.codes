@@ -9,7 +9,7 @@ type Props = {
 export const Header = ({ title, custom, children }: Props) => {
     return (
         <div className={`w-full text-white mt-20 ${custom}`}>
-            <h1>{title} TEST</h1>
+            <h1>{title}</h1>
             {children}
         </div>
     );

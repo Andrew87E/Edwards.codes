@@ -1,31 +1,41 @@
-import { BetterLetters, Container, Header, Page, ParticlesContainer, Skills } from "../Components";
+import {
+    BetterLetters,
+    Container,
+    Header,
+    Page,
+    Links,
+    Skills,
+    Snow,
+} from "../Components";
 import React from "react";
 import { GetStaticProps } from "next";
 
 const Projects: GetStaticProps = () => {
     return (
         <>
-            <ParticlesContainer />
+            <Snow />
             <Page
                 currentPage="Skills"
                 meta={{
                     desc: "These are some of the skills I've been working on!",
                 }}
             >
-                <Header
-                custom="h-96 text-white" 
-                title={<BetterLetters 
-                words="My Skills"
-                custom="text-6xl"
-                />}
-                />
+                <section className="text-center w-full">
+                    <Header
+                        custom="mb-6 text-white ae-title-letters"
+                        title={
+                            <BetterLetters
+                                words="My Skills"
+                                custom="text-9xl"
+                            />
+                        }
+                    />
+                </section>
                 <Skills />
                 <Container />
             </Page>
         </>
     );
 };
-
-// seo
 
 export default Projects;

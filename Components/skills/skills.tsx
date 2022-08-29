@@ -37,7 +37,7 @@ import {
 
 export const Skills: React.FC = () => {
     return (
-        <section className="w-full text-white relative top-32 mb-20 relative p-4">
+        <section className="w-full text-white relative mb-20 relative p-4">
             <section className="w-full flex justify-center">
                 <section className="inline-flex flex-wrap">
                     <FaHtml5
