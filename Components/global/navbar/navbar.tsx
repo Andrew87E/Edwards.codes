@@ -37,7 +37,7 @@ export const Navbar = ({ currentPage }: any) => {
     return (
         <>
             <Name />
-            <ul className="nav-menu inline-flex mr-4 flex-wrap ae-nav-links ">
+            <ul className="nav-menu inline-flex mr-4 flex-wrap ae-nav-links text-lg lg:text-xl 2xl:text-2xl ae-text-outline-small-dark">
                 {routes.map((item, index) => {
                     return (
                         <li

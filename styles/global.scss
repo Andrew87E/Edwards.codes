@@ -96,6 +96,27 @@
     z-index: -10;
 }
 
+.ae-text-outline {
+    text-shadow: -2px 0 $light-green, 0 -2px $light-green, 2px 0 $light-green,
+        0 2px $light-green;
+    font-family: "Space Grotesk", sans-serif;
+    cursor: default;
+}
+
+.ae-text-outline-small {
+    text-shadow: -1px 0 $light-green, 0 -1px $light-green, 1px 0 $light-green,
+        0 1px $light-green;
+    font-family: "Space Grotesk", sans-serif;
+    cursor: default;
+}
+
+.ae-text-outline-small-dark {
+    text-shadow: -1px 0 $dark-green, 0 -1px $dark-green, 1px 0 $dark-green,
+        0 1px $dark-green;
+    font-family: "Space Grotesk", sans-serif;
+    cursor: default;
+}
+
 .ae-new-post-head {
     text-shadow: 3px 2px $dark-teal;
     font-family: "Space Grotesk", sans-serif;
