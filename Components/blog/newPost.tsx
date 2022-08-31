@@ -31,7 +31,7 @@ export const NewPost: React.FC = () => {
                         img: `${img}`,
                         author: `${author}`,
                         body: `${clean()}`,
-                        userEmail: `${user.email}`,
+                        userEmail: `${user?.email}`,
                     })
                     .then((res) => {
                         console.log(res);
