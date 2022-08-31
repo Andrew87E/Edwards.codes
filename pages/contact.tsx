@@ -6,7 +6,7 @@ const ContactMe: GetStaticProps = () => {
     return (
         <>
             <Page currentPage="Contact" meta={{ desc: "Drop me a line!" }}>
-                <div className="flex flex-wrap h-screen">
+                <div className="flex flex-wrap min-h-screen">
                     <article className="mt-20 w-full justify-center text-center">
                         <BetterLetters
                             words="Drop me a line!"
@@ -40,7 +40,7 @@ const ContactMe: GetStaticProps = () => {
                                 <input
                                     type="text"
                                     name="Email"
-                                    className="border bg-black border-lime-500 text-white text-sm rounded-full focus:ring-lime-500 focus:border-lime-500 block h-20 resize-y w-full md:w-8/12 p-2.5 autofill:bg-black"
+                                    className="border bg-black border-lime-500 text-white text-sm rounded-full focus:ring-lime-500 focus:border-lime-500 block h-20 resize-y w-full md:w-8/12 p-6 autofill:bg-black"
                                     placeholder="Email"
                                     max="100"
                                     id="email"
@@ -52,7 +52,7 @@ const ContactMe: GetStaticProps = () => {
                                     <div className="w-full md:w-9/12">
                                         <textarea
                                             name="Message"
-                                            className="border bg-black border-lime-500 text-white text-sm rounded-3xl h-96 resize-y focus:ring-lime-500 focus:border-lime-500 w-full mb-16"
+                                            className="border bg-black border-lime-500 text-white text-sm rounded-3xl h-96 resize-y focus:ring-lime-500 focus:border-lime-500 w-full mb-16 p-5"
                                             placeholder="Message"
                                             id="message"
                                             required
