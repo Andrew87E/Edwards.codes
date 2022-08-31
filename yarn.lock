@@ -45,13 +45,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@csstools/convert-colors@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@csstools/convert-colors@npm:2.0.0"
-  checksum: 6ce595d17f98489e621bacd8e948a17315436e8eab9039a653ff8a75bc06cefe6c636db32c25018cb5479ea1f072fef055db768dc31750f153bdd98099f4a718
-  languageName: node
-  linkType: hard
-
 "@eslint/eslintrc@npm:^1.3.0":
   version: 1.3.0
   resolution: "@eslint/eslintrc@npm:1.3.0"
@@ -419,30 +412,6 @@ __metadata:
   dependencies:
     defer-to-connect: ^2.0.0
   checksum: c29df3bcec6fc3bdec2b17981d89d9c9fc9bd7d0c9bcfe92821dc533f4440bc890ccde79971838b4ceed1921d456973c4180d7175ee1d0023ad0562240a58d95
-  languageName: node
-  linkType: hard
-
-"@tailwindcss/forms@npm:^0.5.2":
-  version: 0.5.2
-  resolution: "@tailwindcss/forms@npm:0.5.2"
-  dependencies:
-    mini-svg-data-uri: ^1.2.3
-  peerDependencies:
-    tailwindcss: ">=3.0.0 || >= 3.0.0-alpha.1"
-  checksum: 3c4df23491d14b37d8cef88d0f3df80f92b684b801d59c23d600773a4ccac11353a555ca36bea68ae4a82134f9c030d1353c05890a5f0085c1c40c649f806640
-  languageName: node
-  linkType: hard
-
-"@tailwindcss/typography@npm:^0.5.4":
-  version: 0.5.4
-  resolution: "@tailwindcss/typography@npm:0.5.4"
-  dependencies:
-    lodash.castarray: ^4.4.0
-    lodash.isplainobject: ^4.0.6
-    lodash.merge: ^4.6.2
-  peerDependencies:
-    tailwindcss: "*"
-  checksum: 016f27266e07fd9966ab785c4182e5ad97c06a2198ff8df739cac90a544ee9c7ac2ac968a4fe9280a1378c3ac8943a315a9f09e70085f21f2839ebc080c88fd8
   languageName: node
   linkType: hard
 
@@ -3253,20 +3222,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.castarray@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "lodash.castarray@npm:4.4.0"
-  checksum: fca8c7047e0ae2738b0b2503fb00157ae0ff6d8a1b716f87ed715b22560e09de438c75b65e01a7e44ceb41c5b31dce2eb576e46db04beb9c699c498e03cbd00f
-  languageName: node
-  linkType: hard
-
-"lodash.isplainobject@npm:^4.0.6":
-  version: 4.0.6
-  resolution: "lodash.isplainobject@npm:4.0.6"
-  checksum: 29c6351f281e0d9a1d58f1a4c8f4400924b4c79f18dfc4613624d7d54784df07efaff97c1ff2659f3e085ecf4fff493300adc4837553104cef2634110b0d5337
-  languageName: node
-  linkType: hard
-
 "lodash.merge@npm:^4.6.2":
   version: 4.6.2
   resolution: "lodash.merge@npm:4.6.2"
@@ -3910,15 +3865,6 @@ __metadata:
   version: 3.1.0
   resolution: "mimic-response@npm:3.1.0"
   checksum: 25739fee32c17f433626bf19f016df9036b75b3d84a3046c7d156e72ec963dd29d7fc8a302f55a3d6c5a4ff24259676b15d915aad6480815a969ff2ec0836867
-  languageName: node
-  linkType: hard
-
-"mini-svg-data-uri@npm:^1.2.3":
-  version: 1.4.4
-  resolution: "mini-svg-data-uri@npm:1.4.4"
-  bin:
-    mini-svg-data-uri: cli.js
-  checksum: 997f1fbd8d59a70f03761e18626d335197a3479cb9d1ff75678e4b64b864d32a0b8fc18115eabde035e5299b8b4a354a78e57dd6ac10f9d604162a6170898d09
   languageName: node
   linkType: hard
 
@@ -4653,8 +4599,6 @@ __metadata:
     "@auth0/nextjs-auth0": ^1.9.1
     "@headlessui/react": ^1.6.6
     "@reduxjs/toolkit": ^1.8.3
-    "@tailwindcss/forms": ^0.5.2
-    "@tailwindcss/typography": ^0.5.4
     "@types/dompurify": ^2.3.3
     "@types/jquery": ^3.5.14
     "@types/marked": ^4.0.6
@@ -4680,12 +4624,9 @@ __metadata:
     postcss: ^8.4.16
     react: 18.2.0
     react-dom: 18.2.0
-    react-hook-form: ^7.34.2
-    react-icon-cloud: ^4.1.4
     react-icons: ^4.4.0
     react-markdown: ^8.0.3
     react-particles: ^2.2.0
-    react-tagcloud: ^2.3.0
     react-text-loop: ^2.3.0
     react-tooltip: ^4.2.21
     react-tsparticles: ^2.2.0
@@ -4842,7 +4783,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.0.0, prop-types@npm:^15.5.8, prop-types@npm:^15.6.2, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.0.0, prop-types@npm:^15.5.8, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -4909,13 +4850,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"randomcolor@npm:^0.6.2":
-  version: 0.6.2
-  resolution: "randomcolor@npm:0.6.2"
-  checksum: 539345c0289f7c52ffd8486e61231e19ccc40b1c4ab9c15594f20a2773b71a9317e0cc8b756160fc8a678ace9ed1e96a8ac90346b2c34c64dfd5acad91f9a73d
-  languageName: node
-  linkType: hard
-
 "react-dom@npm:18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
@@ -4932,26 +4866,6 @@ __metadata:
   version: 2.0.4
   resolution: "react-fast-compare@npm:2.0.4"
   checksum: 06046595f90a4e3e3a56f40a8078c00aa71bdb064ddb98343f577f546aa22e888831fd45f009c93b34707cc842b4c637737e956fd13d6f80607ee92fb9cf9a1c
-  languageName: node
-  linkType: hard
-
-"react-hook-form@npm:^7.34.2":
-  version: 7.34.2
-  resolution: "react-hook-form@npm:7.34.2"
-  peerDependencies:
-    react: ^16.8.0 || ^17 || ^18
-  checksum: 485cde0248e668ad1845b927f9cc05b434c384141bb03bc143a7d7cc937eebf119c935114ccbfa397b463808283dab5b2334022fe5dba975402b201e601d6876
-  languageName: node
-  linkType: hard
-
-"react-icon-cloud@npm:^4.1.4":
-  version: 4.1.4
-  resolution: "react-icon-cloud@npm:4.1.4"
-  dependencies:
-    "@csstools/convert-colors": ^2.0.0
-  peerDependencies:
-    react: ">=16"
-  checksum: 92fe04a4d1826b439172180347a27b83254770acb710078d9a7d4501547ad6499d824bb98b21776dcbf0301d05186cb464453fcdf6556b11b83a92a170f741b4
   languageName: node
   linkType: hard
 
@@ -5026,20 +4940,6 @@ __metadata:
   peerDependencies:
     react: ">=16"
   checksum: 30a5f04f490075fa70744b27db0fd6100632f4617b02a5473af1310e5e862cf1b0b50b1a5e3759533c6dddafd42d16f16eece9c7684ba3a406058a944de0ea93
-  languageName: node
-  linkType: hard
-
-"react-tagcloud@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "react-tagcloud@npm:2.3.0"
-  dependencies:
-    prop-types: ^15.6.2
-    randomcolor: ^0.6.2
-    seedrandom: ^3.0.5
-    shuffle-array: ^1.0.1
-  peerDependencies:
-    react: ">=16.8.0"
-  checksum: 8ab9c5a7be2a8b0b0a762452bcec47799618eb01b2a5ac544f03492e9021757e4e5ed88db65135da027334027258e5ddaf631ddab18dadd865ec519eb3e1e709
   languageName: node
   linkType: hard
 
@@ -5379,13 +5279,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"seedrandom@npm:^3.0.5":
-  version: 3.0.5
-  resolution: "seedrandom@npm:3.0.5"
-  checksum: 728b56bc3bc1b9ddeabd381e449b51cb31bdc0aa86e27fcd0190cea8c44613d5bcb2f6bb63ed79f78180cbe791c20b8ec31a9627f7b7fc7f476fd2bdb7e2da9f
-  languageName: node
-  linkType: hard
-
 "semver@npm:^6.3.0":
   version: 6.3.0
   resolution: "semver@npm:6.3.0"
@@ -5442,13 +5335,6 @@ __metadata:
   version: 3.0.0
   resolution: "shebang-regex@npm:3.0.0"
   checksum: 1a2bcae50de99034fcd92ad4212d8e01eedf52c7ec7830eedcf886622804fe36884278f2be8be0ea5fde3fd1c23911643a4e0f726c8685b61871c8908af01222
-  languageName: node
-  linkType: hard
-
-"shuffle-array@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "shuffle-array@npm:1.0.1"
-  checksum: 9f299ad69622f0f8049bb02d287287f46d4d96299b20010ce072b1b00adbe0dbb5fb488dd136bcc2f1858f6bbbe9b939bdf35fc379c96a3e1000da77fd29e2eb
   languageName: node
   linkType: hard
 
