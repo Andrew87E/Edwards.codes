@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { Page, BetterLetters, Parallax } from "../Components";
+import { Page, BetterLetters, Parallax, Animated } from "../Components";
 
 const Home: GetStaticProps = () => {
     return (
@@ -24,10 +24,38 @@ const Home: GetStaticProps = () => {
                             custom="text-8xl ae-letters"
                         />
                         <br />
-                        <BetterLetters
-                            words="Web Developer"
-                            custom="text-5xl ae-letters"
-                        />
+                        <article>
+                            <Animated
+                                line1={
+                                    <BetterLetters
+                                        words="Front-End Web"
+                                        custom="text-5xl ae-text-outline-small ae-ranch"
+                                    />
+                                }
+                                line2={
+                                    <BetterLetters
+                                        words="Back-End Web"
+                                        custom="text-5xl ae-text-outline-small ae-ranch"
+                                    />
+                                }
+                                line3={
+                                    <BetterLetters
+                                        words="Full-Stack Web"
+                                        custom="text-5xl ae-text-outline-small ae-ranch"
+                                    />
+                                }
+                                line4={
+                                    <BetterLetters
+                                        words="Mobile"
+                                        custom="text-5xl ae-text-outline-small ae-ranch"
+                                    />
+                                }
+                            />{" "}
+                            <BetterLetters
+                                words="Developer"
+                                custom="text-5xl ae-text-outline-small ae-ranch"
+                            />
+                        </article>
                     </article>
                 </section>
             </Page>

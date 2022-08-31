@@ -3,14 +3,13 @@ import {
     Container,
     Header,
     Page,
-    Links,
     Skills,
     Snow,
 } from "../Components";
 import React from "react";
 import { GetStaticProps } from "next";
 
-const Projects: GetStaticProps = () => {
+const SkillsPage: GetStaticProps = () => {
     return (
         <>
             <Snow />
@@ -38,4 +37,4 @@ const Projects: GetStaticProps = () => {
     );
 };
 
-export default Projects;
+export default SkillsPage;

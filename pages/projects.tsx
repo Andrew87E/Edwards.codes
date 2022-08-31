@@ -1,5 +1,4 @@
 import {
-    Container,
     ProjectCards,
     Page,
     Links,
@@ -14,13 +13,11 @@ import { TiWeatherPartlySunny } from "react-icons/ti";
 import {
     FaReact,
     FaSass,
-    FaGithub,
     FaHtml5,
     FaCss3Alt,
     FaMarkdown,
 } from "react-icons/fa";
 import {
-    SiJavascript,
     SiTypescript,
     SiNodedotjs,
     SiExpress,

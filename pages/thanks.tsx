@@ -7,12 +7,12 @@ const Thanks: GetStaticProps = () => {
     return (
         <>
             <Fireworks />
-            <Page currentPage="Contact" meta={{ desc: "Thank you!" }}>
+            <Page currentPage="Thanks!" meta={{ desc: "Thank you!" }}>
                 <section className="text-white text-6xl h-screen w-full self-center test-center">
                     <article className="text-center mt-56">
                         <BetterLetters 
                         words="Thank you! I will be in touch soon"
-                        custom=""
+                        custom="text-7xl ae-text-outline"
                         />
                     </article>
                 </section>
