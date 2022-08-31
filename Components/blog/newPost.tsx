@@ -35,7 +35,6 @@ export const NewPost: React.FC = () => {
                     })
                     .then((res) => {
                         console.log(res);
-                        console.log("RES SENT");
                     });
                 Router.push("/blog");
             }
