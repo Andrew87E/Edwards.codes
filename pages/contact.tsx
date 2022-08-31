@@ -30,7 +30,7 @@ const ContactMe: GetStaticProps = () => {
                                 <input
                                     type="text"
                                     name="Name"
-                                    className="border bg-black border-lime-500 text-white text-sm rounded-full focus:ring-lime-500 focus:border-lime-500 block h-20 resize-y w-full md:w-8/12 p-2.5 autofill:bg-black"
+                                    className="border bg-black border-lime-500 text-white text-sm rounded-full focus:ring-lime-500 focus:border-lime-500 block h-20 resize-y w-full md:w-8/12 p-6 autofill:bg-black"
                                     placeholder="Name"
                                     id="name"
                                     max="100"
