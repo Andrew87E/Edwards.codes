@@ -44,7 +44,7 @@ const Projects: GetStaticProps = () => {
                 meta={{ desc: "Check out my work so far!" }}
             >
                 <Header
-                    custom="mb-6 text-white ae-title-letters"
+                    custom="mb-6 text-white ae-title-letters text-center"
                     title={
                         <BetterLetters words="My Projects" custom="text-9xl" />
                     }

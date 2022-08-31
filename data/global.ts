@@ -13,7 +13,7 @@ type Projects = {
     alt: string;
     img: string;
     children?: JSX.Element | JSX.Element[];
-};   
+};
 
 export const routes: Route[] = [
     {
@@ -37,8 +37,6 @@ export const routes: Route[] = [
         path: "/contact",
     },
 ];
-
-// add testimonials
 
 export const projects: Projects[] = [
     {

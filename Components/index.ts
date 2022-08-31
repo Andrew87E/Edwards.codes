@@ -16,3 +16,4 @@ export { Hover } from "./skills/Hover";
 export { BetterLetters } from "./letters/betterletters";
 export { Parallax } from "./particles/parallax";
 export { Header } from "./global/header/Header";
+export { Fireworks } from "./particles/fireworks";

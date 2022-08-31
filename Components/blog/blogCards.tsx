@@ -127,7 +127,7 @@ export const BlogCards: React.FC = () => {
                 </div>
                 {user ? (
                     <button
-                        className="block text-white bg-transparent hover:bg-gray-900 hover:bg-opacity-40 focus:ring-4 focus:outline-none focus:ring-lime-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center border border-lime-500 rounded-full"
+                        className="block text-white bg-transparent hover:bg-gray-900 hover:bg-opacity-40 focus:ring-4 focus:outline-none focus:ring-lime-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center border border-lime-500"
                         type="button"
                     >
                         <Link href="/blog/newpost">
