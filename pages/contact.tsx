@@ -58,13 +58,13 @@ const ContactMe: GetStaticProps = () => {
                                             required
                                             maxLength={280}
                                         />
+                                        <input
+                                            className="border p-2 border-lime-500 hover:bg-gray-900 text-white rounded-full w-20 h-10 cursor-pointer"
+                                            type="submit"
+                                            value="Submit"
+                                        ></input>
                                     </div>
                                 </div>
-                                <input
-                                    className="border p-2 border-lime-500 hover:bg-gray-900 text-white rounded-full w-20 h-10 cursor-pointer"
-                                    type="submit"
-                                    value="Submit"
-                                ></input>
                             </form>
                         </div>
                     </section>
