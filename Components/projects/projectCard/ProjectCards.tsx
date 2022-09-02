@@ -40,12 +40,12 @@ export const ProjectCards = ({
                                     layout="fill"
                                     priority
                                     data-mdb-ripple="true"
-                                    className="rounded-3xl hover:scale-95"
+                                    className="rounded-3xl hover:scale-95 outline outline-lime-500"
                                 />
                             </a>
                         </Link>
                     </div>
-                    <div className="p-6 w-11/12 mx-auto -mt-24 bg-gray-900 rounded-3xl z-20 relative mb-4 text-center">
+                    <div className="p-6 w-11/12 mx-auto -mt-24 bg-gray-900 opacity-80 rounded-3xl z-20 relative mb-4 text-center">
                         <Link
                             href={`${github}`}
                             className="hover:underline w-full"

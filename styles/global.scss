@@ -45,6 +45,10 @@
     background: $light-green;
 }
 
+.ae-nav {
+    background-color: rgba($color: #000000, $alpha: 0.7);
+}
+
 .ae-b-green {
     border-color: $logo-green;
 }
@@ -110,7 +114,7 @@
 .ae-text-outline-small {
     text-shadow: -1px 0 $light-green, 0 -1px $light-green, 1px 0 $light-green,
         0 1px $light-green;
-    cursor: default; 
+    cursor: default;
 }
 
 .ae-name {
@@ -149,6 +153,16 @@
 .ae-new-post-head {
     text-shadow: 3px 2px $dark-teal;
     font-family: "Space Grotesk", sans-serif;
+}
+
+.ae-scale {
+    &:hover {
+        scale: 1.03;
+        // transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+        //     rotate(var(--tw-rotate)) skewX(var(--tw-skew-x))
+        //     skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x))
+        //     scaleY(var(--tw-scale-y));
+    }
 }
 
 // @media screen and (max-width: 768px) {

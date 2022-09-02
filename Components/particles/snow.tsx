@@ -57,7 +57,7 @@ export const Snow: React.FC = () => {
                             default: "out",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 2,
                         straight: false,
                     },
                     number: {
@@ -68,13 +68,25 @@ export const Snow: React.FC = () => {
                         value: 80,
                     },
                     opacity: {
-                        value: 0.5,
+                        value: 0.3,
                     },
                     shape: {
-                        type: "star",
+                        type: "circle",
                     },
                     size: {
                         value: { min: 1, max: 5 },
+                    },
+                    twinkle: {
+                        lines: {
+                            enable: false,
+                            frequency: 1,
+                            opacity: 1,
+                        },
+                        particles: {
+                            enable: true,
+                            frequency: 5,
+                            opacity: 1,
+                        },
                     },
                 },
                 detectRetina: true,

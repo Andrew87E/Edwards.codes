@@ -277,7 +277,7 @@ export const Links: React.FC = () => {
                         },
                         random: false,
                         size: false,
-                        speed: 2,
+                        speed: 1,
                         spin: {
                             acceleration: 0,
                             enable: false,
@@ -290,10 +290,10 @@ export const Links: React.FC = () => {
                         density: {
                             enable: true,
                             area: 800,
-                            factor: 1000,
+                            factor: 1200,
                         },
                         limit: 0,
-                        value: 100,
+                        value: 60,
                     },
                     opacity: {
                         random: {
@@ -307,12 +307,12 @@ export const Links: React.FC = () => {
                         animation: {
                             count: 0,
                             enable: true,
-                            speed: 3,
+                            speed: 1,
                             decay: 0,
                             sync: false,
                             destroy: "none",
                             startValue: "random",
-                            minimumValue: 0.1,
+                            minimumValue: 0.05,
                         },
                     },
                     reduceDuplicates: false,

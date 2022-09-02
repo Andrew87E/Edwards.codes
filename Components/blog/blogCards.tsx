@@ -41,7 +41,7 @@ export const BlogCards: React.FC = () => {
                                 </a>
                             </Link>
                         </div>
-                        <div className="p-6 w-11/12 mx-auto -mt-24 bg-gray-900 rounded-3xl z-20 relative mb-4">
+                        <div className="p-6 w-11/12 mx-auto -mt-24 bg-gray-900 opacity-80 rounded-3xl z-20 relative mb-4">
                             <p className="uppercase text-sm text-lime-500 text-center pb-3 bg-transparent">
                                 {blog.title}
                             </p>

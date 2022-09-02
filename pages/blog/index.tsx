@@ -8,7 +8,7 @@ const { user } = useUser()
 
   return (
     <>
-      <Snow />
+    <Snow />
       <Page
       currentPage="Blog"
       meta={{ desc: "My blog page!" }}

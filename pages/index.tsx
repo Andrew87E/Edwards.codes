@@ -16,44 +16,18 @@ const Home: GetStaticProps = () => {
                     <article className="text-white self-center">
                         <BetterLetters
                             words="Andrew"
-                            custom="text-8xl ae-letters"
+                            custom="text-8xl ae-letters ae-space"
                         />
                         <br />
                         <BetterLetters
                             words="Edwards"
-                            custom="text-8xl ae-letters"
+                            custom="text-8xl ae-letters ae-space"
                         />
                         <br />
                         <article>
-                            <Animated
-                                line1={
-                                    <BetterLetters
-                                        words="Front-End Web"
-                                        custom="text-5xl ae-text-outline-small ae-ranch"
-                                    />
-                                }
-                                line2={
-                                    <BetterLetters
-                                        words="Back-End Web"
-                                        custom="text-5xl ae-text-outline-small ae-ranch"
-                                    />
-                                }
-                                line3={
-                                    <BetterLetters
-                                        words="Full-Stack Web"
-                                        custom="text-5xl ae-text-outline-small ae-ranch"
-                                    />
-                                }
-                                line4={
-                                    <BetterLetters
-                                        words="Mobile"
-                                        custom="text-5xl ae-text-outline-small ae-ranch"
-                                    />
-                                }
-                            />{" "}
                             <BetterLetters
-                                words="Developer"
-                                custom="text-5xl ae-text-outline-small ae-ranch"
+                                words="Web Developer"
+                                custom="text-5xl ae-text-outline-small ae-robot"
                             />
                         </article>
                     </article>

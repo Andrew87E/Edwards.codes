@@ -12,19 +12,19 @@ import { GetStaticProps } from "next";
 const SkillsPage: GetStaticProps = () => {
     return (
         <>
-            <Snow />
+        <Snow />
             <Page
                 currentPage="Skills"
                 meta={{
                     desc: "These are some of the skills I've been working on!",
                 }}
             >
-                <section className="text-center w-full">
+                <section className="text-center w-full mb-24">
                     <Header
-                        custom="mb-6 text-white ae-title-letters"
+                        custom="text-white ae-title-letters"
                         title={
                             <BetterLetters
-                                words="My Skills"
+                                words="Skills"
                                 custom="text-9xl"
                             />
                         }

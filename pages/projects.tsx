@@ -35,7 +35,7 @@ import { DiJqueryLogo } from "react-icons/di";
 const Projects: GetStaticProps = () => {
     return (
         <>
-            <Links />
+        <Links />
             <Page
                 currentPage="Projects"
                 meta={{ desc: "Check out my work so far!" }}
@@ -43,11 +43,11 @@ const Projects: GetStaticProps = () => {
                 <Header
                     custom="mb-6 text-white ae-title-letters text-center"
                     title={
-                        <BetterLetters words="My Projects" custom="text-9xl" />
+                        <BetterLetters words="Projects" custom="text-9xl" />
                     }
                 />
 
-                <section className="flex inline-flex flex-wrap mt-28 w-full justify-center">
+                <section className="inline-flex flex-wrap mt-28 w-full justify-center">
                     <ProjectCards
                         project="Password Generator"
                         desc="A simple JavaScript Password Generator"
