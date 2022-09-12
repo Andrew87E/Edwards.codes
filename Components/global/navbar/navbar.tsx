@@ -17,22 +17,22 @@ export const Navbar = ({ currentPage }: any) => {
         }
     };
 
-    const handleLogin = () => {
-        if (currentPage === "Blog") {
-            return (
-                <Link href="/api/auth/login">
-                    <a
-                        className="text-white hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 mt-4 opacity-70 mr-5 hover:text-white hover:opacity-100"
-                        onClick={handleDrop}
-                    >
-                        Log In
-                    </a>
-                </Link>
-            );
-        } else {
-            return null;
-        }
-    };
+    // const handleLogin = () => {
+    //     if (currentPage === "Blog") {
+    //         return (
+    //             <Link href="/api/auth/login">
+    //                 <a
+    //                     className="text-white hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 mt-4 opacity-70 mr-5 hover:text-white hover:opacity-100"
+    //                     onClick={handleDrop}
+    //                 >
+    //                     Log In
+    //                 </a>
+    //             </Link>
+    //         );
+    //     } else {
+    //         return null;
+    //     }
+    // };
 
     return (
         <>
@@ -66,7 +66,14 @@ export const Navbar = ({ currentPage }: any) => {
                         ></Image>
                     </button>
                 ) : (
-                    handleLogin()
+                    <Link href="/api/auth/login">
+                        <a
+                            className="text-white hover:border-gray-300 transition-all duration-700 hover:duration-100 hover:scale-125 mt-4 opacity-70 mr-5 hover:text-white hover:opacity-100"
+                            onClick={handleDrop}
+                        >
+                            Log In
+                        </a>
+                    </Link>
                 )}
                 {user && drop ? (
                     <div

@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next";
 import React from "react";
-import { Page, BetterLetters, Parallax, Animated } from "../Components";
+import { Page, BetterLetters, Parallax } from "../Components";
 
 const Home: GetStaticProps = () => {
     return (
