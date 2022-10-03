@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
                     )}
 
                     <a
-                        href="https://drive.google.com/uc?id=1k1qUE_UsDxBmgwkYA8EPF6zemKnZCB-Y&export=download"
+                        href="https://drive.google.com/file/d/1V-FB3ul7itm1nOFTeuD4GIbM540A16Q2/view?usp=sharing"
                         type="button"
                         className="rounded-full border-2 border-white text-white leading-normal uppercase hover:scale-110 hover:border-green-500 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1 justify-center"
                         rel="noopener noreferrer"

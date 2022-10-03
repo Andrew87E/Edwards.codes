@@ -30,7 +30,7 @@ export const Page = ({ currentPage, meta: { desc }, children }: PageProps) => {
             </Head>
 
             <main>
-                <nav className="fixed top-0 right-0 left-0 h-16 inline-flex items-center justify-between z-30 ae-nav">
+                <nav className="fixed top-0 right-0 left-0 h-16 inline-flex items-center justify-between z-30 ae-nav border border-black">
                     <div className="hidden md:inline-flex w-full items-center justify-between">
                         <Navbar currentPage={currentPage} />
                     </div>

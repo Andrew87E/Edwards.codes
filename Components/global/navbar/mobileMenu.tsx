@@ -22,7 +22,7 @@ export const MobileMenu = ({ currentPage }: any) => {
         <>
             <Name />
             <button
-                className="mr-4 text-3xl transition-all transition-transform duration-200"
+                className="mr-4 text-3xl transition-transform duration-200"
                 onClick={handleClick}
             >
                 {showMenu ? (
