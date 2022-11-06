@@ -1,7 +1,7 @@
 @tailwind base
 @tailwind components
 @tailwind utilities
-@import "variables"
+@import "./_variables"
 @import url("https://fonts.googleapis.com/css2?family=Lustria&family=Poppins&family=Rancho&family=Roboto+Mono&family=Space+Grotesk:wght@500&display=swap")
 
 // font-family: 'Lustria', serif;
@@ -88,19 +88,16 @@
     z-index: -10
 
 .ae-text-outline
-    text-shadow: -2px 0 $light-green, 0 -2px $light-green, 2px 0 $light-green,
-        0 2px $light-green;
+    text-shadow: -2px 0 $light-green, 0 -2px $light-green, 2px 0 $light-green, 0 2px $light-green
     font-family: "Space Grotesk", sans-serif
     cursor: default
 
     &-small
-        text-shadow: -1px 0 $light-green, 0 -1px $light-green, 1px 0 $light-green,
-        0 1px $light-green;
+        text-shadow: -1px 0 $light-green, 0 -1px $light-green, 1px 0 $light-green, 0 1px $light-green
         cursor: default
 
 .ae-name
-    text-shadow: -0.5px 0 $light-green, 0 -0.5px $light-green,
-        0.5px 0 $light-green, 0 0.5px $light-green;
+    text-shadow: -0.5px 0 $light-green, 0 -0.5px $light-green, 0.5px 0 $light-green, 0 0.5px $light-green
     font-size: 38px
 
 .ae-space
@@ -119,8 +116,7 @@
     font-family: "Roboto Mono", monospace
 
 .ae-text-outline-small-dark
-    text-shadow: -1px 0 $dark-green, 0 -1px $dark-green, 1px 0 $dark-green,
-        0 1px $dark-green;
+    text-shadow: -1px 0 $dark-green, 0 -1px $dark-green, 1px 0 $dark-green, 0 1px $dark-green
     font-family: "Space Grotesk", sans-serif
     cursor: default
 
@@ -269,69 +265,69 @@
         opacity: 0
 
 @-moz-keyframes move
-    0% {
+    0% 
     left: 0
     opacity: 0
 
-    35% {
+    35% 
     left: 41%
     -moz-transform: rotate(0deg)
     transform: rotate(0deg)
     opacity: 1
 
-    65% {
+    65% 
     left: 59%
     -moz-transform: rotate(0deg)
     transform: rotate(0deg)
     opacity: 1
 
-    100% {
+    100% 
     left: 100%
     -moz-transform: rotate(-180deg)
     transform: rotate(-180deg)
     opacity: 0
 
 @-webkit-keyframes move
-    0% {
+    0% 
     left: 0
     opacity: 0
 
-    35% {
+    35% 
     left: 41%
     -webkit-transform: rotate(0deg)
     transform: rotate(0deg)
     opacity: 1
 
-    65% {
+    65% 
     left: 59%
     -webkit-transform: rotate(0deg)
     transform: rotate(0deg)
     opacity: 1
 
-    100% {
+    100% 
     left: 100%
     -webkit-transform: rotate(-180deg)
     transform: rotate(-180deg)
     opacity: 0
 
 @-o-keyframes move
-    0% {
+    0% 
     left: 0
     opacity: 0
 
-    35% {
+    35% 
     left: 41%
     -o-transform: rotate(0deg)
     transform: rotate(0deg)
     opacity: 1
 
-    65% {
+    65% 
     left: 59%
     -o-transform: rotate(0deg)
     transform: rotate(0deg)
     opacity: 1
 
-    100% {
+    100% 
     left: 100%
     -o-transform: rotate(-180deg)
     transform: rotate(-180deg)
