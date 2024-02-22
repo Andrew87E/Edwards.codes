@@ -14,7 +14,7 @@
         "@headlessui/react": "^1.6.6",
         "@reduxjs/toolkit": "^1.8.3",
         "autoprefixer": "^10.4.8",
-        "axios": "^0.27.2",
+        "axios": "^0.28.0",
         "dompurify": "^2.3.10",
         "jquery": "^3.6.0",
         "marked": "^4.0.19",
